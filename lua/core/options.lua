@@ -2,12 +2,12 @@ local options = {
 -----------------------------------------------------------
 -- General
 -----------------------------------------------------------
-    fileencoding = "utf-8",     -- the encoding written to a file
+    fileencoding = "utf-8",     -- The encoding written to a file
     mouse = "a",                -- Enable mouse support
     wrap = false,               -- Display lines as one long line
     number = true,              -- Set numbered lines
     numberwidth = 4,            -- Set number column width to 2 {default 4}
-    relativenumber = false,      -- Set relative numbered lines
+    relativenumber = false,     -- Set relative numbered lines
     showmatch = false,          -- When a bracket is inserted, briefly jump to the matching one
     showcmd = false,            -- Disable builtin mode status for bultin status
     backup = false,             -- Don't use backupfile
@@ -15,7 +15,7 @@ local options = {
     swapfile = false,           -- Don't use swapfile
     undofile = true,            -- Enable persistent undo
     confirm = true,             -- Raise dialog asking to save changes 
-    clipboard = "unnamedplus",  -- allows neovim to access the system clipboard
+    clipboard = "unnamedplus",  -- Allows neovim to access the system clipboard
     completeopt = { "menuone", "noselect", "noinsert" }, -- For nvim's pop-up menu
 
 -----------------------------------------------------------
@@ -23,7 +23,7 @@ local options = {
 -----------------------------------------------------------
     termguicolors = true,    -- Use "gui" attributes instead of "cterm" attributes
     showmode = false,        -- Nvim's builtin mode status
-    ruler = false,            -- Nvim's builtin statusline Dont show line and column number of the cursor position
+    ruler = false,           -- Nvim's builtin statusline Dont show line and column number of the cursor position
     splitbelow = true,       -- Force all horizontal splits to go below current window
     splitright = true,       -- Force all vertical splits to go to the right of current window
     cursorline = true,       -- Highlight the current line
@@ -91,7 +91,7 @@ local disabled_built_ins = {
    "getscriptPlugin",
    "gzip",
    "logipat",
---   "netrw",
+--  "netrw",
 --  "netrwPlugin",
    "netrwSettings",
    "netrwFileHandlers",
@@ -124,11 +124,7 @@ for _, plugin in pairs(disabled_built_ins) do
 end
 
 -- https://github.com/ChristianChiarulli/nvim
-
 -- https://github.com/LunarVim/Neovim-from-scratch
-
 -- https://github.com/GideonWolfe/nvim-lua/blob/main/lua/settings.lua
-
 -- https://github.com/brainfucksec/neovim-lua
-
 -- https://github.com/NvChad/NvChad/blob/main/lua/core/options.lua
