@@ -66,7 +66,6 @@ local options = {
 }
 
 vim.opt.fillchars.eob=" "
-
 vim.opt.shortmess:append "sI"    -- Shorter Indications for statusline
 
 for k, v in pairs(options) do
