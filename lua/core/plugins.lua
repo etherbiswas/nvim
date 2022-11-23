@@ -43,7 +43,7 @@ return packer.startup(function(use)
   -- Add your plugins here:
   use "wbthomason/packer.nvim" -- packer can manage itself
 
-  use "nvim-lua/popup.nvim" 
+  use "nvim-lua/popup.nvim"
   use "moll/vim-bbye"
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
@@ -56,17 +56,17 @@ return packer.startup(function(use)
   -- Colorscheme
   use "sainnhe/gruvbox-material"
 
-  -- Statusline 
+  -- Statusline
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
   }
-  
+
   -- Bufferline
   use "akinsho/bufferline.nvim"
 
-  -- Comments 
-  use "numToStr/Comment.nvim" 
+  -- Comments
+  use "numToStr/Comment.nvim"
 
   -- git labels
   use {
@@ -76,7 +76,7 @@ return packer.startup(function(use)
       require('gitsigns').setup()
     end
   }
- 
+
   -- Terminal
   use "akinsho/toggleterm.nvim"
 
@@ -104,8 +104,8 @@ return packer.startup(function(use)
       "neovim/nvim-lspconfig",
     requires = {
       "jose-elias-alvarez/null-ls.nvim",
-      "williamboman/nvim-lsp-installer",
-      "tamago324/nlsp-settings.nvim",
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
     },
   }
   -- Autopair
@@ -117,7 +117,6 @@ return packer.startup(function(use)
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
 

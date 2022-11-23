@@ -1,3 +1,7 @@
+local function getWords()
+  return tostring(vim.fn.wordcount().words)
+end
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
