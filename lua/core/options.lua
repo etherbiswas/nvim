@@ -14,7 +14,7 @@ local options = {
     writebackup = false,        -- Make a backup before overwriting a file
     swapfile = false,           -- Don't use swapfile
     undofile = true,            -- Enable persistent undo
-    confirm = true,             -- Raise dialog asking to save changes 
+    confirm = true,             -- Raise dialog asking to save changes
     clipboard = "unnamedplus",  -- Allows neovim to access the system clipboard
     completeopt = { "menuone", "noselect", "noinsert" }, -- For nvim's pop-up menu
 
@@ -37,7 +37,7 @@ local options = {
     scrolloff = 8,           -- Minimal number of screen lines to keep above and below the cursor
     sidescrolloff = 8,       -- Minimal number of screen columns to keep left and right of the cursor
     pumheight = 10,          -- Pop up menu height
-  
+
 -----------------------------------------------------------
 -- Tabs, indent
 -----------------------------------------------------------
