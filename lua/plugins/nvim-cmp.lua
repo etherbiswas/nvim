@@ -25,8 +25,7 @@ cmp.setup {
     ['<C-b>'] = cmp.mapping.scroll_docs(-2),
     ['<C-f>'] = cmp.mapping.scroll_docs(2),
     ['<C-Space>'] = cmp.mapping.complete(),
-    ["<C-y>"] = cmp.config.disable,
-    ['<C-e>'] = cmp.mapping.close(),
+    ['<C-e>'] = cmp.mapping.abort(),
     ['<C-y>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
@@ -58,5 +57,14 @@ cmp.setup {
     { name = 'luasnip' },
     { name = 'path' },
     { name = 'buffer' },
+  },
+  window = {
+    documentation = {
+      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    },
+  },
+  experimental = {
+    ghost_text = true,
+    active_replace = true
   },
 }
