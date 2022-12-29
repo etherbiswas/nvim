@@ -55,6 +55,7 @@ return packer.startup(function(use)
 
   -- Colorscheme
   use "sainnhe/gruvbox-material"
+  use "ellisonleao/gruvbox.nvim"
 
   -- Statusline
   use {

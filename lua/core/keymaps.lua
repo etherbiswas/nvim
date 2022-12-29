@@ -55,6 +55,9 @@ map("n", "<C-Right>", ":vertical resize +2<CR>")
 map("n", "<S-l>", ":tabnext<CR>")
 map("n", "<S-h>", ":tabprevious<CR>")
 
+-- Extensions
+map("n", "<C-b>", ":NvimTreeToggle<CR>")
+
 -- Move text up and down
 map("n", "<A-j>", "<Esc>:m .+1<CR>")
 map("n", "<A-k>", "<Esc>:m .-2<CR>")
@@ -65,6 +68,9 @@ map("i", "<C-k>", "<up>")
 map("i", "<C-j>", "<down>")
 map("i", "<C-h>", "<left>")
 map("i", "<C-l>", "<right>")
+
+-- Extensions
+map("i", "<C-b>", ":NvimTreeToggle<CR>")
 
 -- File write/Edit options
 map("i", "<C-d>", "<BS>")

@@ -53,6 +53,7 @@ autocmd('BufEnter', {
 -----------------------------------------------------------
 -- Filetype Settings
 -----------------------------------------------------------
+--[[
 -- Disable line length marker
 augroup('setLineLength', { clear = true })
 autocmd('Filetype', {
@@ -60,6 +61,7 @@ autocmd('Filetype', {
   pattern = { 'text', 'markdown', 'html', 'xhtml', 'javascript', 'typescript' },
   command = 'setlocal cc=0'
 })
+]]--
 
 -- Set indentation to 2 spaces
 augroup('setIndent', { clear = true })

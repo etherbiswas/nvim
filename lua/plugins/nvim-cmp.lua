@@ -10,6 +10,42 @@ end
 
 require("luasnip.loaders.from_vscode").lazy_load()
 
+local check_backspace = function()
+  local col = vim.fn.col "." - 1
+  return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
+end
+
+--   פּ ﯟ   some other good icons
+local kind_icons = {
+  Text = "",
+  Method = "m",
+  Function = "",
+  Constructor = "",
+  Field = "",
+  Variable = "",
+  Class = "ﴯ",
+  Interface = " ",
+  Module = "",
+  Property = "",
+  Unit = "",
+  Value = "",
+  Enum = "",
+  Keyword = "",
+  --Snippet = "﬌",
+  Snippet = "",
+  Color = "",
+  File = "",
+  Reference = "",
+  Folder = "",
+  EnumMember = "",
+  Constant = "",
+  Struct = "",
+  Event = "",
+  Operator = "ﬦ",
+  TypeParameter = "",
+}
+-- find more here: https://www.nerdfonts.com/cheat-sheet
+
 cmp.setup {
   -- Load snippet support
   snippet = {
@@ -51,6 +87,15 @@ cmp.setup {
       end
     end
   },
+formatting = {
+    fields = { "abbr", "kind" },
+    format = function(entry, vim_item)
+      -- Kind icons
+      -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+      vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+      return vim_item
+    end,
+  },
 
   sources = {
     { name = 'nvim_lsp' },
@@ -58,10 +103,19 @@ cmp.setup {
     { name = 'path' },
     { name = 'buffer' },
   },
+
   window = {
+documentation = cmp.config.window.bordered(),
+    --[[
+    completion = {
+      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    },
+    --  documentation = cmp.config.window.bordered(),
     documentation = {
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
     },
+    ]]--
+
   },
   experimental = {
     ghost_text = true,

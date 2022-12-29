@@ -22,7 +22,7 @@ local options = {
 -- Neovim UI
 -----------------------------------------------------------
     termguicolors = true,    -- Use "gui" attributes instead of "cterm" attributes
-    showmode = false,        -- Nvim's builtin mode status
+    showmode = true,        -- Nvim's builtin mode status
     ruler = false,           -- Nvim's builtin statusline Dont show line and column number of the cursor position
     splitbelow = true,       -- Force all horizontal splits to go below current window
     splitright = true,       -- Force all vertical splits to go to the right of current window
@@ -91,8 +91,8 @@ local disabled_built_ins = {
    "getscriptPlugin",
    "gzip",
    "logipat",
---  "netrw",
---  "netrwPlugin",
+   "netrw",
+   "netrwPlugin",
    "netrwSettings",
    "netrwFileHandlers",
    "matchit",
