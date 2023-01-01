@@ -10,7 +10,7 @@ vim.g.gruvbox_material_better_performance = '1'
 vim.g.gruvbox_material_transparent_background = "0"
 vim.g.gruvbox_contrast_dark = 'hard'
 
-local colorscheme = "gruvbox"
+local colorscheme = "gruvbox-material"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
