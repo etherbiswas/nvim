@@ -70,7 +70,7 @@ map("i", "<C-h>", "<left>")
 map("i", "<C-l>", "<right>")
 
 -- Extensions
-map("i", "<C-b>", ":NvimTreeToggle<CR>")
+map("i", "<C-b>", "<Esc>:NvimTreeToggle<CR>")
 
 -- File write/Edit options
 map("i", "<C-d>", "<BS>")

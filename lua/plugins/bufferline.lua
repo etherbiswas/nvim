@@ -16,7 +16,7 @@ if (not status) then
 end
 
 vim.opt.termguicolors = true
-bufferline.setup {
+bufferline.setup({
   options = {
     mode = "tabs",
     --numbers = "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
@@ -83,23 +83,36 @@ bufferline.setup {
     show_buffer_close_icons = false,
     --show_close_icon = true | false,
     show_close_icon = false,
+    color_icons = true,
     --show_tab_indicators = true | false,
     show_tab_indicators = true,
     persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
     -- can also be a table containing 2 custom separators
     -- [focused and unfocused]. eg: { '|', '|' }
-    --separator_style = "slant" | "thick" | "thin" | {"any", "any"},
-    separator_style = "thin",
     --enforce_regular_tabs = false | true,
     enforce_regular_tabs = false,
     --always_show_bufferline = true | false,
-    always_show_bufferline = true
+    always_show_bufferline = true,
+    --separator_style = "slant" | "thick" | "thin" | {"any", "any"},
+    separator_style = "slant"
+  },
     --[[sort_by = "id" | "extension" | "relative_directory" | "directory" | "tabs" | function(buffer_a, buffer_b)
         -- add custom logic
         return buffer_a.modified > buffer_b.modified
       end]]
-  }
-}
+      highlights = {
+    fill = {
+      bg = '#282828'
+    },
+       separator = {
+      fg = '#282828',
+      bg = '#151818',
+    },
+    separator_selected = {
+      fg = '#282828',
+    }
+  },
+  })
 
 --按键映射
 --nnoremap <silent> gb :BufferLinePick<CR>

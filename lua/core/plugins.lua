@@ -47,6 +47,7 @@ return packer.startup(function(use)
   use "moll/vim-bbye"
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
+  use "norcalli/nvim-colorizer.lua"
   --use "luochen1990/rainbow" --idk
   use "folke/which-key.nvim"
 
@@ -114,6 +115,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+  use 'nvim-telescope/telescope-file-browser.nvim'
 
   -- Treesitter
   use {

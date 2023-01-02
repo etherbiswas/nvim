@@ -4,6 +4,10 @@ local autocmd = vim.api.nvim_create_autocmd
 -----------------------------------------------------------
 -- General Settings
 -----------------------------------------------------------
+-- Highlight numberline
+vim.cmd([[highlight LineNr guibg=#282828]])
+vim.cmd([[highlight CursorLineNr guibg=#282828]])
+
 -- Briefly highlight a selection on yank
 augroup('YankHighlight', { clear = true })
 autocmd('TextYankPost', {

@@ -1,6 +1,4 @@
-require("nvim-tree").setup()
-
--- OR setup with some options
+-- Setup with some options
 require("nvim-tree").setup({
  update_focused_file = {
     enable = true,
@@ -47,5 +45,6 @@ require("nvim-tree").setup({
   view = {
     width = 30,
     side = "left",
+    number = true
     },
 })
