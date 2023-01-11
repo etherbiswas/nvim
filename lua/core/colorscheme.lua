@@ -56,7 +56,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
       'hi CursorLineNr                       guibg=#282828  |' ..
       'hi DiagnosticVirtualTextError         guifg=#db4740 guibg=#3c1f1e |' ..
       'hi DiagnosticVirtualTextWarn          guifg=#e9b143 guibg=#473c29 |' ..
-      'hi DiagnosticVirtualTextInformation   guifg=#80aa9e guibg=#2e3b3b |' ..
+      'hi DiagnosticVirtualTextInfo          guifg=#80aa9e guibg=#2e3b3b |' ..
       'hi DiagnosticVirtualTextHint          guifg=#8bba7f guibg=#333e34 |' ..
       'hi NvimTreeNormal                     guibg=#181818 |' ..
       'hi NvimTreeEndOfBuffer                guibg=#181818 |' ..
