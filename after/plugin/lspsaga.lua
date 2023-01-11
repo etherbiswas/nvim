@@ -125,7 +125,7 @@ vim.keymap.set('i', '<C-p>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
 vim.keymap.set('n', 'gp', '<Cmd>Lspsaga peek_definition<CR>', opts)
 vim.keymap.set('n', '<C-f>', '<Cmd>Lspsaga rename<CR>', opts)
 --vim.keymap.set('i', '<C-f>', '<Cmd>Lspsaga rename<CR>', opts)
--- Example:
+
 local function get_file_name(include_path)
   local file_name = require('lspsaga.symbolwinbar').get_file_name()
   if vim.fn.bufname '%' == '' then return '' end
@@ -138,7 +138,7 @@ local function get_file_name(include_path)
     file_path = (cur == '.' or cur == '~') and '' or
         file_path .. cur .. ' ' .. '%#LspSagaWinbarSep#>%*' .. ' %*'
   end
-  return file_name
+  return file_path .. file_name
 end
 
 local function config_winbar()
