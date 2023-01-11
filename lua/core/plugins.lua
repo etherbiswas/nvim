@@ -57,6 +57,8 @@ return packer.startup(function(use)
   -- Colorscheme
   use "sainnhe/gruvbox-material"
   use "ellisonleao/gruvbox.nvim"
+  use 'folke/tokyonight.nvim'
+  use "tjdevries/colorbuddy.nvim"
 
   -- Statusline
   use {
@@ -98,12 +100,15 @@ return packer.startup(function(use)
       'saadparwaiz1/cmp_luasnip',
       "rafamadriz/friendly-snippets",
       'L3MON4D3/LuaSnip',
+      'onsails/lspkind-nvim',
+      'folke/lsp-colors.nvim',
+      'glepnir/lspsaga.nvim' -- LSP UIs
     },
   }
 
   -- LSP
   use {
-      "neovim/nvim-lspconfig",
+    "neovim/nvim-lspconfig",
     requires = {
       "jose-elias-alvarez/null-ls.nvim",
       "williamboman/mason.nvim",
@@ -123,7 +128,7 @@ return packer.startup(function(use)
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
-   -- Dashboard (start screen)
+  -- Dashboard (start screen)
   use {
     'goolord/alpha-nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },

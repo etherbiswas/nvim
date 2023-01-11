@@ -2,49 +2,18 @@ local cmp_status_ok, cmp = pcall(require, 'cmp')
 if not cmp_status_ok then
   return
 end
+local status, cmp = pcall(require, "cmp")
+if (not status) then return end
+local lspkind = require 'lspkind'
 
-local luasnip_status_ok, luasnip = pcall(require, 'luasnip')
-if not luasnip_status_ok then
-  return
-end
-
+local status, luasnip = pcall(require, "luasnip")
+if (not status) then return end
 require("luasnip.loaders.from_vscode").lazy_load()
 
 local check_backspace = function()
   local col = vim.fn.col "." - 1
   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
-
---   פּ ﯟ   some other good icons
-local kind_icons = {
-  Text = "",
-  Method = "m",
-  Function = "",
-  Constructor = "",
-  Field = "",
-  Variable = "",
-  Class = "ﴯ",
-  Interface = " ",
-  Module = "",
-  Property = "",
-  Unit = "",
-  Value = "",
-  Enum = "",
-  Keyword = "",
-  --Snippet = "﬌",
-  Snippet = "",
-  Color = "",
-  File = "",
-  Reference = "",
-  Folder = "",
-  EnumMember = "",
-  Constant = "",
-  Struct = "",
-  Event = "",
-  Operator = "ﬦ",
-  TypeParameter = "",
-}
--- find more here: https://www.nerdfonts.com/cheat-sheet
 
 cmp.setup {
   -- Load snippet support
@@ -58,8 +27,8 @@ cmp.setup {
   mapping = {
     ['<C-j>'] = cmp.mapping.select_next_item(),
     ['<C-k>'] = cmp.mapping.select_prev_item(),
-    ['<C-b>'] = cmp.mapping.scroll_docs(-2),
-    ['<C-f>'] = cmp.mapping.scroll_docs(2),
+    ['<C-b>'] = cmp.mapping.scroll_docs(2),
+    ['<C-f>'] = cmp.mapping.scroll_docs(-2),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
     ['<C-y>'] = cmp.mapping.confirm {
@@ -87,26 +56,19 @@ cmp.setup {
       end
     end
   },
-formatting = {
-    fields = { "abbr", "kind" },
-    format = function(entry, vim_item)
-      -- Kind icons
-      -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-      vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
-      return vim_item
-    end,
-  },
-
   sources = {
     { name = 'nvim_lsp' },
+    { name = 'buffer' },
     { name = 'luasnip' },
     { name = 'path' },
-    { name = 'buffer' },
+  },
+  formatting = {
+    format = lspkind.cmp_format({ with_text = false, maxwidth = 50 })
   },
 
   window = {
-documentation = cmp.config.window.bordered(),
-completion = cmp.config.window.bordered(),
+    --documentation = cmp.config.window.bordered(),
+    --completion = cmp.config.window.bordered(),
     --[[
     completion = {
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
@@ -115,11 +77,14 @@ completion = cmp.config.window.bordered(),
     documentation = {
       border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
     },
-    ]]--
-
+    ]] --
   },
   experimental = {
     ghost_text = true,
     active_replace = true
   },
 }
+
+--vim.cmd [[
+--  highlight! default link CmpItemKind CmpItemMenuDefault
+--]]

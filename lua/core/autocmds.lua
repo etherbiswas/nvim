@@ -4,10 +4,6 @@ local autocmd = vim.api.nvim_create_autocmd
 -----------------------------------------------------------
 -- General Settings
 -----------------------------------------------------------
--- Highlight numberline
-vim.cmd([[highlight LineNr guibg=#282828]])
-vim.cmd([[highlight CursorLineNr guibg=#282828]])
-
 -- Briefly highlight a selection on yank
 augroup('YankHighlight', { clear = true })
 autocmd('TextYankPost', {
@@ -24,9 +20,9 @@ autocmd({ "BufEnter", "FocusGained", "InsertLeave", "CmdlineLeave", "WinEnter" }
   group = 'RelativeNumber',
   callback = function()
     if vim.o.nu and vim.api.nvim_get_mode().mode ~= "i" then
-       vim.opt.relativenumber = true
+      vim.opt.relativenumber = true
     end
-end,
+  end,
 })
 
 -- Set absolute number if in normal mode
@@ -36,10 +32,10 @@ autocmd({ "BufLeave", "FocusLost", "InsertEnter", "CmdlineEnter", "WinLeave" }, 
   group = 'AbsoluteNumber',
   callback = function()
     if vim.o.nu then
-       vim.opt.relativenumber = false
-       vim.cmd "redraw"
+      vim.opt.relativenumber = false
+      vim.cmd "redraw"
     end
-end,
+  end,
 })
 
 -- Remove whitespace on save
@@ -65,7 +61,7 @@ autocmd('Filetype', {
   pattern = { 'text', 'markdown', 'html', 'xhtml', 'javascript', 'typescript' },
   command = 'setlocal cc=0'
 })
-]]--
+]] --
 
 -- Set indentation to 2 spaces
 augroup('setIndent', { clear = true })

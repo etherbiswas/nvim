@@ -7,7 +7,7 @@ local function map(mode, lhs, rhs, opts)
 end
 
 --Remap space as leader key
-map("", "<Space>", "<Nop>", opts)
+--map("", "<Space>", "<Nop>")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -34,13 +34,13 @@ map("n", "<C-h>", "<C-w>h")
 map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
-]]--
+]] --
 map("n", "j", "gj")
 map("n", "k", "gk")
 map("n", "<C-j>", "2gj")
 map("n", "<C-k>", "2gk")
---map("n", "<C-l>", "mzyyp`z")
-map("n", "<C-q>", ":q<CR>")
+map("n", "<C-q>", ":q!<CR>")
+map("n", "<A-q>", ":qa!<CR>")
 -- File write/edit options
 map("n", "<C-x>", ":wq!<CR>")
 map("n", "<C-s>", ":w!<CR>")
@@ -61,6 +61,7 @@ map("n", "<C-b>", ":NvimTreeToggle<CR>")
 -- Move text up and down
 map("n", "<A-j>", "<Esc>:m .+1<CR>")
 map("n", "<A-k>", "<Esc>:m .-2<CR>")
+map("n", "<C-l>", "mzyyp`z")
 
 -- Insert --
 -- Better insert mode navigation

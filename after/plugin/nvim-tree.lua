@@ -1,6 +1,6 @@
 -- Setup with some options
 require("nvim-tree").setup({
- update_focused_file = {
+  update_focused_file = {
     enable = true,
     update_cwd = true,
   },
@@ -21,7 +21,7 @@ require("nvim-tree").setup({
           symlink_open = "",
         },
         git = {
-          unstaged = "",
+          unstaged = "M",
           staged = "S",
           unmerged = "",
           renamed = "➜",
@@ -45,6 +45,6 @@ require("nvim-tree").setup({
   view = {
     width = 30,
     side = "left",
-    number = true
-    },
+    number = false
+  },
 })
