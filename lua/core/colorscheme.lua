@@ -60,9 +60,10 @@ vim.api.nvim_create_autocmd('ColorScheme', {
       'hi DiagnosticVirtualTextHint          guifg=#8bba7f guibg=#333e34 |' ..
       'hi NvimTreeNormal                     guibg=#181818 |' ..
       'hi NvimTreeEndOfBuffer                guibg=#181818 |' ..
-      'hi NoiceCmdlinePopupBorderCmdline     guifg=#ea6962 guibg=#282828 |' ..
       'hi TelescopePromptBorder              guifg=#ea6962 guibg=#282828 |' ..
+      'hi NoiceCmdlinePopupBorderCmdline     guifg=#ea6962 guibg=#282828 |' ..
       'hi TelescopePromptNormal              guifg=#ea6962 guibg=#282828 |' ..
+      'hi TelescopePromptBorder              guifg=#ea6962 guibg=#282828 |' ..
       'hi TelescopePromptTitle               guifg=#ea6962 guibg=#282828 |' ..
       'hi TelescopePromptPrefix              guifg=#ea6962 guibg=#282828 |' ..
       'hi TelescopePromptCounter             guifg=#ea6962 guibg=#282828 |' ..
