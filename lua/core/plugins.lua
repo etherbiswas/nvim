@@ -58,7 +58,6 @@ return packer.startup(function(use)
   use "sainnhe/gruvbox-material"
   use "ellisonleao/gruvbox.nvim"
   use 'folke/tokyonight.nvim'
-  use "tjdevries/colorbuddy.nvim"
 
   -- Statusline
   use {
@@ -70,7 +69,11 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"
 
   -- Comments
-  use "numToStr/Comment.nvim"
+  use { "numToStr/Comment.nvim",
+    requires = {
+      "JoosepAlviste/nvim-ts-context-commentstring"
+    }
+  }
 
   -- git labels
   use {
@@ -101,7 +104,6 @@ return packer.startup(function(use)
       "rafamadriz/friendly-snippets",
       'L3MON4D3/LuaSnip',
       'onsails/lspkind-nvim',
-      'folke/lsp-colors.nvim',
       'glepnir/lspsaga.nvim' -- LSP UIs
     },
   }
@@ -115,18 +117,16 @@ return packer.startup(function(use)
       "williamboman/mason-lspconfig.nvim",
     },
   }
-  -- Autopair
+  -- Autopairs
   use "windwp/nvim-autopairs"
+  use "windwp/nvim-ts-autotag"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
-  use 'nvim-telescope/telescope-file-browser.nvim'
+  use "nvim-telescope/telescope-file-browser.nvim"
 
   -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
-  }
-  use "JoosepAlviste/nvim-ts-context-commentstring"
+  use "nvim-treesitter/nvim-treesitter"
 
   -- Dashboard (start screen)
   use {
