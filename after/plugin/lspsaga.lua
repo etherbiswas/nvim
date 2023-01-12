@@ -30,90 +30,40 @@ saga.init_lsp_saga {
       end
     end
   },
-
   custom_kind = {
-    File = { '', '#e2cca9' },
-    Module = { '', '#80aa9e' },
-    Namespace = { 'ﴯ', '#f28534' },
-    Package = { ' ', '#d3869b' },
-    Class = { 'ﴯ', '#d3869b' },
-    Method = { '', '#d3869b' },
+    File = { '', '#7c6f64' },
+    Module = { ' ', '#8bba7f' },
+    Namespace = { 'ﴯ', '#8bba7f' },
+    Package = { '  ', '#d3869b' },
+    Class = { 'ﴯ', '#80aa9e' },
+    Constant = { ' ', '#d3869b' },
+    Method = { ' ', '#b0b846' },
+    Variable = { ' ', '#b0b846' },
+    Function = { " ", '#b0b846' },
     Property = { 'ﰠ', '#2e3b3b' },
-    Field = { "ﰠ", "#8bba7f" },
-    Constructor = { "", "#80aa9e" },
+    Interface = { "", '#8bba7f' },
+    Field = { "ﰠ", "#80aa9e" },
+    Constructor = { "", "#b0b846" },
     String = { ' ', '#b0b846' },
-    Number = { " ", '#b0b846' },
-    Boolean = { " ", '#f28534' },
-    Array = { " ", '#80aa9e' },
+    Number = { " ", '#d3869b' },
+    Boolean = { "◩ ", '#f2594b' },
+    Array = { " ", '#f2594b' },
     Object = { " ", '#f28534' },
-    Key = { "", '#f2594b' },
-    Null = { " ", '#f2594b' },
-    EnumMember = { "", '#b0b846' },
+    Key = { "", '#80aa9e' },
+    Null = { "ﳠ ", '#d3869b' },
+    EnumMember = { "", '#80aa9e' },
     Struct = { "", '#d3869b' },
-    Event = { "", '#d3869b' },
+    Event = { "", '#80aa9e' },
     Operator = { "", '#b0b846' },
+    TypeParameter = { ' ', '#b0b846' },
+    TypeAlias = { ' ', '#b0b846' },
+    Parameter = { ' ', '#80aa9e' },
+    Macro = { '  ', '#f2594b' },
+    StaticMethod = { 'ﴂ ', '#f28534' },
   },
   server_filetype_map = {
     typescript = 'typescript'
   }
-}
-
-local symbols = {
-  Text = "",
-  Method = "",
-  Function = "",
-  Constructor = "",
-  Field = "ﰠ",
-  Variable = "",
-  Class = "ﴯ",
-  Interface = "",
-  Module = "",
-  Property = "ﰠ",
-  Unit = "塞",
-  Value = "",
-  Enum = "",
-  Keyword = "",
-  Snippet = "",
-  Color = "",
-  File = "",
-  Reference = "",
-  Folder = "",
-  EnumMember = "",
-  Constant = "",
-  Struct = "פּ",
-  Event = "",
-  Operator = "",
-  TypeParameter = ""
-}
-
-local sy2 = {
-
-  File = { " " },
-  Module = { " " },
-  Namespace = { " " },
-  Package = { " " },
-  Class = { " " },
-  Method = { " " },
-  Property = { "ﰠ" },
-  Field = { "ﰠ" },
-  Constructor = { " " },
-  Enum = { " " },
-  Interface = { " " },
-  Function = { " " },
-  Variable = { " " },
-  Constant = { " " },
-  String = { " " },
-  Number = { " " },
-  Boolean = { "◩ " },
-  Array = { " " },
-  Object = { " " },
-  Key = { " " },
-  Null = { "ﳠ " },
-  EnumMember = { " " },
-  Struct = { " " },
-  Event = { " " },
-  Operator = { " " },
-  TypeParameter = { " " },
 }
 
 local opts = { noremap = true, silent = true }
@@ -128,6 +78,7 @@ vim.keymap.set('n', '<C-f>', '<Cmd>Lspsaga rename<CR>', opts)
 
 local function get_file_name(include_path)
   local file_name = require('lspsaga.symbolwinbar').get_file_name()
+  -- local file_name = vim.fn.expand("%:t")
   if vim.fn.bufname '%' == '' then return '' end
   if include_path == false then return file_name end
   -- Else if include path: ./lsp/saga.lua -> lsp > saga.lua
@@ -138,7 +89,7 @@ local function get_file_name(include_path)
     file_path = (cur == '.' or cur == '~') and '' or
         file_path .. cur .. ' ' .. '%#LspSagaWinbarSep#>%*' .. ' %*'
   end
-  return file_path .. file_name
+  return file_name
 end
 
 local function config_winbar()
@@ -173,5 +124,5 @@ vim.api.nvim_create_autocmd('User', {
   pattern = 'LspsagaUpdateSymbol',
   callback = function() config_winbar() end,
 })
---vim.cmd([[highlight LspSagaWinbar guifg=#e2cca9]])
-vim.cmd([[highlight LspSagaWinbarSep guifg=#e2cca9]])
+vim.cmd([[highlight LspSagaWinbarSep gui=NONE, guifg=#7c6f64]])
+vim.cmd([[highlight LspSagaWinbarFile gui=NONE, guifg=#7c6f64]])
