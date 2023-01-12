@@ -26,7 +26,7 @@ bufferline.setup({
     show_close_icon = true,
     show_buffer_close_icons = true,
     always_show_bufferline = true,
-    separator_style = "slant"
+    separator_style = "thin"
     --separator_style = "slant" | "thick" | "thin" | {"any", "any"},
   },
   highlights = {
