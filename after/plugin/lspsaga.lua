@@ -118,7 +118,7 @@ saga.setup({
     folder_level = 2,
     in_custom = true,
     hide_keyword = true,
-    color_mode = true,
+    color_mode = false,
   },
 
   outline = {
