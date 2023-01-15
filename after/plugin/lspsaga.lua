@@ -1,5 +1,7 @@
-local status, saga = pcall(require, "lspsaga")
-if (not status) then return end
+local lspsaga_status_ok, saga = pcall(require, 'lspsaga')
+if not lspsaga_status_ok then
+  return
+end
 
 saga.setup({
   ui = {
@@ -118,7 +120,7 @@ saga.setup({
     folder_level = 2,
     in_custom = true,
     hide_keyword = true,
-    color_mode = true,
+    color_mode = false,
   },
 
   outline = {

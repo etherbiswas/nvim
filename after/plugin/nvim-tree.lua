@@ -1,5 +1,9 @@
--- Setup with some options
-require("nvim-tree").setup({
+local tree_status_ok, tree = pcall(require, 'nvim-tree')
+if not tree_status_ok then
+  return
+end
+
+tree.setup({
   update_focused_file = {
     enable = true,
     update_cwd = true,

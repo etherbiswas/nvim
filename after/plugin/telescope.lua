@@ -1,13 +1,16 @@
-local status, telescope = pcall(require, "telescope")
-if (not status) then return end
+local telescope_status_ok, telescope = pcall(require, 'telescope')
+if not telescope_status_ok then
+  return
+end
+
 local actions = require('telescope.actions')
-local builtin = require("telescope.builtin")
+local builtin = require('telescope.builtin')
 
 local function telescope_buffer_dir()
   return vim.fn.expand('%:p:h')
 end
 
-local fb_actions = require "telescope".extensions.file_browser.actions
+local fb_actions = require 'telescope'.extensions.file_browser.actions
 
 telescope.setup {
   defaults = {

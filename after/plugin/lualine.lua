@@ -1,4 +1,8 @@
--- cool function for progress
+local lualine_status_ok, lualine = pcall(require, 'lualine')
+if not lualine_status_ok then
+  return
+end
+
 local progress = function()
   local current_line = vim.fn.line(".")
   local total_lines = vim.fn.line("$")
@@ -23,7 +27,7 @@ local diff = {
   cond = hide_in_width
 }
 
-require('lualine').setup {
+lualine.setup({
   options = {
     icons_enabled = true,
     theme = 'gruvbox-material',
@@ -55,4 +59,4 @@ require('lualine').setup {
   winbar = {},
   inactive_winbar = {},
   extensions = {}
-}
+})

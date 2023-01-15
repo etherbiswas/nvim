@@ -1,5 +1,7 @@
-local status, null_ls = pcall(require, "null-ls")
-if (not status) then return end
+local null_ls_status_ok, null_ls = pcall(require, 'null_ls')
+if not null_ls_status_ok then
+  return
+end
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
@@ -12,7 +14,7 @@ local lsp_formatting = function(bufnr)
   })
 end
 
-null_ls.setup {
+null_ls.setup({
   sources = {
     null_ls.builtins.formatting.prettierd,
     null_ls.builtins.formatting.fish_indent,
@@ -34,12 +36,12 @@ null_ls.setup {
       })
     end
   end
-}
+},
 
-vim.api.nvim_create_user_command(
-  'DisableLspFormatting',
-  function()
-    vim.api.nvim_clear_autocmds({ group = augroup, buffer = 0 })
-  end,
-  { nargs = 0 }
-)
+  vim.api.nvim_create_user_command(
+    'DisableLspFormatting',
+    function()
+      vim.api.nvim_clear_autocmds({ group = augroup, buffer = 0 })
+    end,
+    { nargs = 0 }
+  ))
