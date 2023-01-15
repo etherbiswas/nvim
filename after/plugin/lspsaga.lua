@@ -111,14 +111,14 @@ saga.setup({
   },
   symbol_in_winbar = {
     enable = true,
-    separator = ' > ',
-    --separator = '  ',
+    -- separator = ' > ',
+    separator = '  ',
     show_file = true,
     --respect_root = true,
     folder_level = 2,
     in_custom = true,
     hide_keyword = true,
-    color_mode = false,
+    color_mode = true,
   },
 
   outline = {
