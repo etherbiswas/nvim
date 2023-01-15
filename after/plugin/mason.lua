@@ -1,6 +1,7 @@
 local servers = {
   "sumneko_lua",
   "cssls",
+  "tailwindcss",
   "html",
   "tsserver",
   "pyright",

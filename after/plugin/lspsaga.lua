@@ -21,6 +21,7 @@ saga.setup({
     },
     kind = {
       File = { '', '#7c6f64' },
+      Folder = { ' ', '#8bba7f' },
       Module = { ' ', '#8bba7f' },
       Namespace = { 'ﴯ ', '#8bba7f' },
       Package = { '  ', '#d3869b' },
@@ -111,9 +112,10 @@ saga.setup({
   symbol_in_winbar = {
     enable = true,
     separator = ' > ',
+    --separator = '  ',
     show_file = true,
     --respect_root = true,
-    folder_level = 1,
+    folder_level = 2,
     in_custom = true,
     hide_keyword = true,
     color_mode = false,
@@ -146,7 +148,9 @@ saga.setup({
       expand_collapse = 'u',
     },
   },
-  server_filetype_map = {},
+  server_filetype_map = {
+    typescript = 'typescript'
+  },
 })
 
 vim.cmd([[highlight LspSagaWinbarSep gui=NONE, guifg=#7c6f64]])
