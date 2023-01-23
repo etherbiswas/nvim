@@ -76,7 +76,7 @@ autocmd('Filetype', {
 augroup('setRainbow', { clear = true })
 autocmd('Filetype', {
   group = 'setRainbow',
-  pattern = { 'markdown', 'html', 'haskell', 'vim'
+  pattern = { 'markdown', 'html'
   },
   command = 'RainbowToggleOn'
 })
