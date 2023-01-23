@@ -128,6 +128,9 @@ return packer.startup(function(use)
   -- Treesitter
   use "nvim-treesitter/nvim-treesitter"
 
+  -- Illuminate
+  use "RRethy/vim-illuminate"
+
   -- Dashboard (start screen)
   use {
     'goolord/alpha-nvim',
