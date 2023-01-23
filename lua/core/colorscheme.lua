@@ -76,7 +76,8 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   'hi LineNr                                 guibg=#282828  |' ..
       'hi CursorLine                         guibg=#3c3836  |' ..
       'hi CursorLineNr                       guibg=#282828  |' ..
-      'hi MatchParen                         guibg=#665c54  |' ..
+      'hi MatchParen                         guifg=#f28534  |' ..
+      --'hi MatchParen                         guibg=#665c54  |' ..
       --'hi CursorLineNr                       guifg=#e9b143  |' ..
       'hi ColorColumn                        guibg=#3c3836  |' ..
       'hi DiagnosticVirtualTextError         guifg=#db4740 guibg=#3c1f1e |' ..
