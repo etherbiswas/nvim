@@ -73,6 +73,14 @@ autocmd('Filetype', {
   command = 'setlocal shiftwidth=2 tabstop=2'
 })
 
+augroup('setRainbow', { clear = true })
+autocmd('Filetype', {
+  group = 'setRainbow',
+  pattern = { 'markdown', 'html', 'haskell', 'vim'
+  },
+  command = 'RainbowToggleOn'
+})
+
 -----------------------------------------------------------
 -- Terminal Settings
 -----------------------------------------------------------

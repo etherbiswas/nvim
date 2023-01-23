@@ -66,6 +66,7 @@ vim.g.gruvbox_material_visual = 'reverse'
 vim.g.gruvbox_material_current_word = 'grey background'
 vim.g.gruvbox_material_statusline_style = 'default'
 vim.g.gruvbox_contrast_dark = 'hard'
+vim.g.rainbow_active = 1
 
 -- Gruvbox Material
 local gruvm = vim.api.nvim_create_augroup('custom_highlights_gruvboxmaterial', {})

@@ -48,7 +48,7 @@ return packer.startup(function(use)
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
   use "norcalli/nvim-colorizer.lua"
-  --use "luochen1990/rainbow" --idk
+  use "luochen1990/rainbow" -- Color Tags in html
   use "folke/which-key.nvim"
 
   -- Icons
