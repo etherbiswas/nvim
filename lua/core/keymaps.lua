@@ -57,6 +57,7 @@ map("n", "<S-h>", ":tabprevious<CR>")
 
 -- Extensions
 map("n", "<C-b>", ":NvimTreeToggle<CR>")
+map("n", "<C-m>", ":RunFile<CR>")
 
 -- Move text up and down
 map("n", "<A-j>", "<Esc>:m .+1<CR>")

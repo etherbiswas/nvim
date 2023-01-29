@@ -87,6 +87,9 @@ return packer.startup(function(use)
   -- Terminal
   use "akinsho/toggleterm.nvim"
 
+  -- Code Runner
+  use "CRAG666/code_runner.nvim"
+
   -- File explorer
   use 'kyazdani42/nvim-tree.lua'
 
