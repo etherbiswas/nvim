@@ -22,16 +22,23 @@ mason.setup({
 })
 
 local servers = {
+  "clangd",
   "sumneko_lua",
   "cssls",
   "tailwindcss",
   "html",
+  "dockerls",
   "tsserver",
   "pyright",
   "bashls",
   "jsonls",
   "yamlls",
+  "intelephense",
 }
+
+--[[ local formatters = {
+  "prettierd",
+} ]]
 
 mason_lspconfig.setup({
   ensure_installed = servers,
