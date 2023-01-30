@@ -37,6 +37,8 @@ map("n", "<C-l>", "<C-w>l")
 ]] --
 map("n", "j", "gj")
 map("n", "k", "gk")
+map("n", "gh", "^")
+map("n", "gl", "$")
 map("n", "<C-j>", "2gj")
 map("n", "<C-k>", "2gk")
 map("n", "<C-q>", ":q!<CR>")
