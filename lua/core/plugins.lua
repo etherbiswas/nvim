@@ -68,13 +68,6 @@ return packer.startup(function(use)
   -- Bufferline
   use "akinsho/bufferline.nvim"
 
-  -- Comments
-  use { "numToStr/Comment.nvim",
-    requires = {
-      "JoosepAlviste/nvim-ts-context-commentstring"
-    }
-  }
-
   -- git labels
   use {
     'lewis6991/gitsigns.nvim',
@@ -124,6 +117,12 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs"
   use "windwp/nvim-ts-autotag"
 
+  -- Comment
+  use { 'numToStr/Comment.nvim',
+    requires = {
+      'JoosepAlviste/nvim-ts-context-commentstring'
+    },
+  }
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-file-browser.nvim"

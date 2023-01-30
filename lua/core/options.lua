@@ -55,7 +55,7 @@ local options = {
   lazyredraw = true, -- Faster scrolling
   synmaxcol = 240, -- Max column for syntax highlight
   updatetime = 300, -- Faster completion (4000ms default)
-  timeoutlen = 100, -- Time to wait for a mapped sequence to complete (in milliseconds)
+  timeoutlen = 1000, -- Time to wait for a mapped sequence to complete (in milliseconds)
 
 
   -----------------------------------------------------------
