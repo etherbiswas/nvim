@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["code_runner.nvim"] = {
+    loaded = true,
+    path = "/home/ether/.local/share/nvim/site/pack/packer/start/code_runner.nvim",
+    url = "https://github.com/CRAG666/code_runner.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -240,6 +245,11 @@ _G.packer_plugins = {
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
   },
+  rainbow = {
+    loaded = true,
+    path = "/home/ether/.local/share/nvim/site/pack/packer/start/rainbow",
+    url = "https://github.com/luochen1990/rainbow"
+  },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
@@ -264,6 +274,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
+  },
+  ["vim-illuminate"] = {
+    loaded = true,
+    path = "/home/ether/.local/share/nvim/site/pack/packer/start/vim-illuminate",
+    url = "https://github.com/RRethy/vim-illuminate"
   },
   ["which-key.nvim"] = {
     loaded = true,

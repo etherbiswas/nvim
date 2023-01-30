@@ -55,10 +55,6 @@ map("n", "<C-Right>", ":vertical resize +2<CR>")
 map("n", "<S-l>", ":tabnext<CR>")
 map("n", "<S-h>", ":tabprevious<CR>")
 
--- Extensions
-map("n", "<C-b>", ":NvimTreeToggle<CR>")
-map("n", "<C-m>", ":RunFile<CR>")
-
 -- Move text up and down
 map("n", "<A-j>", "<Esc>:m .+1<CR>")
 map("n", "<A-k>", "<Esc>:m .-2<CR>")
@@ -71,9 +67,6 @@ map("i", "<C-j>", "<down>")
 map("i", "<C-h>", "<left>")
 map("i", "<C-l>", "<right>")
 
--- Extensions
-map("i", "<C-b>", "<Esc>:NvimTreeToggle<CR>")
-
 -- File write/Edit options
 map("i", "<C-d>", "<BS>")
 map("i", "<C-x>", "<Esc>:wq!<CR>")
@@ -82,6 +75,12 @@ map("i", "<C-s>", "<Esc>:w!<CR>")
 
 -- Press jk fast to enter
 map("i", "jk", "<ESC>")
+
+-- Common --
+-- Extensions
+map("n", "<C-b>", ":NvimTreeToggle<CR>")
+map("i", "<C-b>", "<Esc>:NvimTreeToggle<CR>")
+map("n", "<C-m>", ":RunFile<CR>")
 
 -- Visual --
 -- Stay in indent mode
