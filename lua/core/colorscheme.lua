@@ -77,9 +77,9 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   'hi LineNr                                 guibg=#282828  |' ..
       'hi CursorLine                         guibg=#3c3836  |' ..
       'hi CursorLineNr                       guibg=#282828  |' ..
+      --'hi CursorLineNr                       guifg=#e9b143  |' ..
       'hi MatchParen                         guifg=#f28534  |' ..
       --'hi MatchParen                         guibg=#665c54  |' ..
-      --'hi CursorLineNr                       guifg=#e9b143  |' ..
       'hi ColorColumn                        guibg=#3c3836  |' ..
       'hi DiagnosticVirtualTextError         guifg=#db4740 guibg=#3c1f1e |' ..
       'hi DiagnosticVirtualTextWarn          guifg=#e9b143 guibg=#473c29 |' ..
@@ -87,7 +87,6 @@ vim.api.nvim_create_autocmd('ColorScheme', {
       'hi DiagnosticVirtualTextHint          guifg=#8bba7f guibg=#333e34 |' ..
       'hi NvimTreeNormal                     guibg=#181818 |' ..
       'hi NvimTreeEndOfBuffer                guibg=#181818 |' ..
-      'hi TelescopePromptBorder              guifg=#ea6962 guibg=#282828 |' ..
       'hi NoiceCmdlinePopupBorderCmdline     guifg=#ea6962 guibg=#282828 |' ..
       'hi TelescopePromptNormal              guifg=#ea6962 guibg=#282828 |' ..
       'hi TelescopePromptBorder              guifg=#ea6962 guibg=#282828 |' ..
