@@ -5,7 +5,7 @@ end
 
 tree.setup({
   disable_netrw = true,
-  hijack_netrw = true,
+  hijack_netrw = false,
   update_focused_file = {
     enable = true,
     update_cwd = true,

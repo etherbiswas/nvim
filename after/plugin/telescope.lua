@@ -16,19 +16,20 @@ telescope.setup {
   defaults = {
     mappings = {
       n = {
-        ["q"] = actions.close
+        ["q"] = actions.close,
       },
     },
   },
   extensions = {
     file_browser = {
       theme = "ivy",
-      layout_config = { height = 40 },
+      -- theme = "dropdown",
+      layout_config = { height = 100 },
       hidden = true,
       initial_mode = "normal",
 
       -- disables netrw and use telescope-file-browser in its place
-      hijack_netrw = false,
+      hijack_netrw = true,
       mappings = {
         -- your custom insert mode mappings
         ["i"] = {
@@ -52,8 +53,10 @@ telescope.load_extension("file_browser")
 vim.keymap.set('n', ';f',
   function()
     builtin.find_files({
-      no_ignore = false,
-      hidden = true
+      respect_gitignore = false,
+      hidden = false,
+      grouped = true,
+      gitstatus = true,
     })
   end)
 vim.keymap.set('n', ';r', function()
@@ -71,6 +74,7 @@ end)
 vim.keymap.set('n', ';e', function()
   builtin.diagnostics()
 end)
+
 vim.keymap.set("n", "sf", function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",
@@ -79,7 +83,9 @@ vim.keymap.set("n", "sf", function()
     hidden = true,
     grouped = true,
     previewer = false,
+    gitstatus = true,
     initial_mode = "normal",
-    layout_config = { height = 40 }
+    layout_strategy = "horizontal",
+    layout_config = { height = 30, width = 0.65 }
   })
 end)
