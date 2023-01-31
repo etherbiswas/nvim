@@ -4,7 +4,7 @@ if not tree_status_ok then
 end
 
 tree.setup({
-  disable_netrw = true,
+  disable_netrw = false,
   hijack_netrw = false,
   update_focused_file = {
     enable = true,
