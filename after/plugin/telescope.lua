@@ -19,6 +19,8 @@ local fb_actions = require 'telescope'.extensions.file_browser.actions
 
 telescope.setup {
   defaults = {
+    prompt_prefix = "  ",
+    selection_caret = " ",
     mappings = {
       -- your custom insert mode mappings
       ["i"] = {
@@ -105,7 +107,7 @@ end)
 vim.keymap.set("n", "sf", function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",
-    -- cwd = telescope_buffer_dir(),
+    cwd = telescope_buffer_dir(),
     respect_gitignore = false,
     hidden = true,
     grouped = true,
