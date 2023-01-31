@@ -68,7 +68,7 @@ return packer.startup(function(use)
   -- Bufferline
   use "akinsho/bufferline.nvim"
 
-  -- git labels
+  -- Git labels
   use {
     'lewis6991/gitsigns.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
