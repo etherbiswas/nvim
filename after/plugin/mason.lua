@@ -40,6 +40,10 @@ local servers = {
   "prettierd",
 } ]]
 
+--[[ local linters = {
+  "eslint_d",
+} ]]
+
 mason_lspconfig.setup({
   ensure_installed = servers,
   automatic_installation = true,

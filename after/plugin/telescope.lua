@@ -20,7 +20,7 @@ local fb_actions = require 'telescope'.extensions.file_browser.actions
 telescope.setup {
   defaults = {
     prompt_prefix = "  ",
-    selection_caret = " ",
+    selection_caret = "  ",
     mappings = {
       -- your custom insert mode mappings
       ["i"] = {
