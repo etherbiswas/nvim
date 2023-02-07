@@ -94,11 +94,12 @@ vim.api.nvim_create_autocmd('ColorScheme', {
       'hi TelescopePromptPrefix              guifg=#ea6962 guibg=#504945 |' ..
       'hi TelescopePromptCounter             guifg=#e2cca9 guibg=#504945 |' ..
       -- 'hi TelescopePreviewTitle              guifg=#e2cca9 guibg=#1d2021 |' ..
-      'hi TelescopePreviewTitle               guifg=#1d2021 guibg=#ea6962 |' ..
-      'hi TelescopePreviewBorder             guifg=#1d2021 guibg=#1d2021 |' ..
+      'hi TelescopePreviewTitle              guifg=#1d2021 guibg=#ea6962 |' ..
+      'hi TelescopePreviewBorder             guifg=#282828 guibg=#282828 |' ..
+      'hi TelescopePreviewNormal             guifg=#282828 guibg=#282828 |' ..
       -- 'hi TelescopeResultsTitle              guifg=#e2cca9 guibg=#1d2021 |' ..
-      'hi TelescopeResultsTitle               guifg=#1d2021 guibg=#80aa9e |' ..
-      'hi TelescopeResultsBorder             guifg=#e2cca9 guibg=#1d2021 |' ..
+      'hi TelescopeResultsTitle              guifg=#1d2021 guibg=#80aa9e |' ..
+      'hi TelescopeResultsBorder             guifg=#1d2021 guibg=#1d2021 |' ..
       'hi TelescopeMatching                  guifg=#80aa9e guibg=#282828 |' ..
       'hi TelescopeSelection                 guifg=#f28534 guibg=#32302f |' ..
       'hi FloatBorder                        guifg=#ea6962 guibg=#1d2021 |' ..
