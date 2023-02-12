@@ -56,7 +56,7 @@ require("gruvbox").setup({
 -- Gruvbox-Material                                      --
 -----------------------------------------------------------
 vim.g.gruvbox_material_better_performance = '1'
-vim.g.gruvbox_material_enable_bold = '1'
+vim.g.gruvbox_material_enable_bold = '0'
 vim.g.gruvbox_material_disable_italic_comment = '0'
 vim.g.gruvbox_material_transparent_background = "0"
 vim.g.gruvbox_material_background = 'hard'
@@ -64,8 +64,8 @@ vim.g.gruvbox_material_foreground = 'material'
 vim.g.gruvbox_material_diagnostic_virtual_text = 'colored'
 vim.g.gruvbox_material_visual = 'grey background'
 -- vim.g.gruvbox_material_visual = 'reverse'
-vim.g.gruvbox_material_current_word = 'underline'
--- vim.g.gruvbox_material_current_word = 'grey background'
+-- vim.g.gruvbox_material_current_word = 'underline'
+vim.g.gruvbox_material_current_word = 'grey background'
 vim.g.gruvbox_material_statusline_style = 'default'
 vim.g.gruvbox_contrast_dark = 'hard'
 vim.g.rainbow_active = 1
