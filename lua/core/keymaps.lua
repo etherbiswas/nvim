@@ -11,14 +11,6 @@ end
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
---[[
--- Disable arrow keys
-map("", "<up>", "<nop>")
-map("", "<down>", "<nop>")
-map("", "<left>", "<nop>")
-map("", "<right>", "<nop>")
---]]
-
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
@@ -28,13 +20,6 @@ map("", "<right>", "<nop>")
 --   command_mode = "c",
 
 -- Normal --
--- Better window navigation
---[[
-map("n", "<C-h>", "<C-w>h")
-map("n", "<C-j>", "<C-w>j")
-map("n", "<C-k>", "<C-w>k")
-map("n", "<C-l>", "<C-w>l")
-]] --
 map("n", "j", "gj")
 map("n", "k", "gk")
 map("n", "gh", "^")
@@ -100,5 +85,3 @@ map("x", "J", ":move '>+1<CR>gv-gv")
 map("x", "K", ":move '<-2<CR>gv-gv")
 map("x", "<A-j>", ":move '>+1<CR>gv-gv")
 map("x", "<A-k>", ":move '<-2<CR>gv-gv")
-
--- Terminal --

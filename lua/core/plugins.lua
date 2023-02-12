@@ -58,7 +58,8 @@ return packer.startup(function(use)
       use "sainnhe/gruvbox-material"
       use "ellisonleao/gruvbox.nvim"
       use 'folke/tokyonight.nvim'
-      use 'navarasu/onedark.nvim'
+      use 'joshdick/onedark.vim'
+      -- use 'navarasu/onedark.nvim'
 
       -- Statusline
       use {
@@ -89,6 +90,7 @@ return packer.startup(function(use)
 
       -- Indent line
       use 'lukas-reineke/indent-blankline.nvim'
+      use 'NvChad/base46'
 
       -- Autocomplete
       use {

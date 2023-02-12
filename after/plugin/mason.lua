@@ -9,42 +9,40 @@ if not mason_lspconfig_status_ok then
 end
 
 mason.setup({
-  ui = {
-    border = "none",
-    icons = {
-      package_installed = "◍",
-      package_pending = "◍",
-      package_uninstalled = "◍",
+    ui = {
+        border = "none",
+        icons = {
+            package_installed = "◍",
+            package_pending = "◍",
+            package_uninstalled = "◍",
+        },
     },
-  },
-  log_level = vim.log.levels.INFO,
-  max_concurrent_installers = 4,
+    log_level = vim.log.levels.INFO,
+    max_concurrent_installers = 4,
 })
 
 local servers = {
-  "clangd",
-  "sumneko_lua",
-  "cssls",
-  "tailwindcss",
-  "html",
-  "dockerls",
-  "tsserver",
-  "pyright",
-  "bashls",
-  "jsonls",
-  "yamlls",
-  "intelephense",
+    "clangd",
+    "cssls",
+    "tailwindcss",
+    "html",
+    "dockerls",
+    "tsserver",
+    "lua_ls",
+    "pyright",
+    "bashls",
+    "jsonls",
+    "yamlls",
+    "intelephense",
 }
 
 --[[ local formatters = {
   "prettierd",
 } ]]
-
 --[[ local linters = {
   "eslint_d",
 } ]]
-
 mason_lspconfig.setup({
-  ensure_installed = servers,
-  automatic_installation = true,
+    ensure_installed = servers,
+    automatic_installation = true,
 })

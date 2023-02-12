@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
+  base46 = {
+    loaded = true,
+    path = "/home/ether/.local/share/nvim/site/pack/packer/start/base46",
+    url = "https://github.com/NvChad/base46"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -225,10 +230,10 @@ _G.packer_plugins = {
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  ["onedark.nvim"] = {
+  ["onedark.vim"] = {
     loaded = true,
-    path = "/home/ether/.local/share/nvim/site/pack/packer/start/onedark.nvim",
-    url = "https://github.com/navarasu/onedark.nvim"
+    path = "/home/ether/.local/share/nvim/site/pack/packer/start/onedark.vim",
+    url = "https://github.com/joshdick/onedark.vim"
   },
   ["packer.nvim"] = {
     loaded = true,
