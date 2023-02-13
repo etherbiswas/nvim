@@ -61,7 +61,7 @@ saga.setup({
             Package = { '  ', '#c678dd' },
             Class = { 'ﴯ ', '#61afef' },
             Constant = { ' ', '#e06c75' },
-            Method = { ' ', '#98c379' },
+            Method = { ' ', '#c678dd' },
             Variable = { ' ', '#98ce79' },
             Function = { ' ', '#98ce79' },
             Property = { 'ﰠ ', '#abb2bf' },
