@@ -27,13 +27,27 @@ local diff = {
     cond = hide_in_width
 }
 
+local branch = {
+    "branch",
+    icons_enabled = true,
+    icon = "",
+}
+
+local mode = {
+    "mode",
+    fmt = function(str)
+      return str:sub(1, 1)
+      -- return "-- " .. str .. " --"
+    end,
+}
+
 lualine.setup({
     options = {
         icons_enabled = true,
         theme = 'auto',
         component_separators = { left = '|', right = '|' },
-        -- component_separators = { left = '', right = '' },
         section_separators = { left = ' ', right = ' ' },
+        -- component_separators = { left = '', right = '' },
         -- section_separators = { left = '', right = '' },
         disabled_filetypes = { "alpha", "dashboard", "NvimTree", "Outline" },
         statusline = {},
@@ -42,8 +56,8 @@ lualine.setup({
         always_divide_middle = true,
     },
     sections = {
-        lualine_a = { 'mode' },
-        lualine_b = { 'branch', diff, 'diagnostics' },
+        lualine_a = { mode },
+        lualine_b = { branch, diff, 'diagnostics' },
         lualine_c = { 'filename' },
         lualine_x = { spaces, 'encoding', 'fileformat', 'filetype' },
         lualine_y = {},
@@ -62,4 +76,6 @@ lualine.setup({
     inactive_winbar = {},
     extensions = {}
 })
-vim.cmd([[highlight lualine_a_command gui=bold, guibg=#56b6c2]])
+-- vim.cmd([[highlight lualine_a_command gui=bold, guibg=#56b6c2]])
+-- vim.cmd([[highlight lualine_b_normal gui=NONE, guifg=#61afef]])
+-- vim.cmd([[highlight lualine_b_normal gui=NONE, guifg=#98c379]])

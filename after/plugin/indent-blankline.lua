@@ -25,7 +25,7 @@ end
 blankline.setup {
     space_char_blankline = " ",
     show_trailing_blankline_indent = false,
-    -- show_first_indent_level = false,
+    show_first_indent_level = true,
     show_current_context = true,
     show_current_context_start = true,
     -- char_highlight_list = {
@@ -39,4 +39,6 @@ blankline.setup {
 }
 
 vim.cmd [[highlight IndentBlanklineContextStart guibg=#3e4452 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineContextChar guifg=#3e4452 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineChar guifg=#495162 gui=nocombine]]
+-- vim.cmd [[highlight IndentBlanklineChar guifg=#3e4452 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineContextChar guifg=#7f848e gui=nocombine]]

@@ -77,16 +77,11 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     pattern = 'gruvbox-material',
     command =
     'hi LineNr                                 guibg=#282828  |' ..
-    -- 'hi CursorLine                         guibg=#3c3836  |' ..
     'hi CursorLineNr                       guibg=#282828  |' ..
-    --'hi CursorLineNr                       guifg=#e9b143  |' ..
-    -- 'hi MatchParen                         guifg=#f28534  |' ..
-    --'hi MatchParen                         guibg=#665c54  |' ..
     'hi ColorColumn                        guibg=#3c3836  |' ..
     'hi DiagnosticVirtualTextError         guifg=#db4740 guibg=#3c1f1e |' ..
     'hi DiagnosticVirtualTextWarn          guifg=#e9b143 guibg=#473c29 |' ..
     'hi DiagnosticVirtualTextHint          guifg=#8bba7f guibg=#333e34 |' ..
-    -- 'hi DiagnosticVirtualTextHint          guifg=#bf68d9 guibg=#282c34 |' ..
     'hi DiagnosticVirtualTextInfo          guifg=#80aa9e guibg=#2e3b3b |' ..
     'hi NvimTreeNormal                     guibg=#181818 |' ..
     'hi NvimTreeEndOfBuffer                guibg=#181818 |' ..
@@ -97,15 +92,10 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     'hi TelescopePromptPrefix              guifg=#ea6962 guibg=#504945 |' ..
     'hi TelescopePromptCounter             guifg=#e2cca9 guibg=#504945 |' ..
     'hi TelescopePreviewTitle              guifg=#e2cca9 guibg=#1d2021 |' ..
-    -- 'hi TelescopePreviewTitle              guifg=#e2cca9 guibg=#1d2021 |' ..
-    -- 'hi TelescopePreviewTitle              guifg=#1d2021 guibg=#ea6962 |' ..
     'hi TelescopePreviewBorder             guifg=#282828 guibg=#282828 |' ..
     'hi TelescopePreviewNormal             guifg=#282828 guibg=#282828 |' ..
     'hi TelescopeResultsTitle              guifg=#80aa9e guibg=#1d2021 |' ..
-    -- 'hi TelescopeResultsTitle              guifg=#e2cca9 guibg=#1d2021 |' ..
-    -- 'hi TelescopeResultsTitle              guifg=#1d2021 guibg=#80aa9e |' ..
     'hi TelescopeResultsBorder             guifg=#504945 guibg=#1d2021 |' ..
-    -- 'hi TelescopeResultsBorder             guifg=#1d2021 guibg=#1d2021 |' ..
     'hi TelescopeMatching                  guifg=#80aa9e guibg=#282828 |' ..
     'hi TelescopeSelection                 guifg=#f28534 guibg=#32302f |' ..
     'hi FloatBorder                        guifg=#ea6962 guibg=#1d2021 |' ..
@@ -123,6 +113,16 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     'hi markid9                            guifg=#ffedc7 |' ..
     'hi markid10                           guifg=#cebfaa |' ..
     'hi CodewindowBorder                   guifg=#ea6962 |'
+    -- 'hi CursorLine                         guibg=#3c3836  |' ..
+    -- 'hi CursorLineNr                       guifg=#e9b143  |' ..
+    -- 'hi MatchParen                         guifg=#f28534  |' ..
+    -- 'hi MatchParen                         guibg=#665c54  |' ..
+    -- 'hi DiagnosticVirtualTextHint          guifg=#bf68d9 guibg=#282c34 |' ..
+    -- 'hi TelescopePreviewTitle              guifg=#e2cca9 guibg=#1d2021 |' ..
+    -- 'hi TelescopePreviewTitle              guifg=#1d2021 guibg=#ea6962 |' ..
+    -- 'hi TelescopeResultsTitle              guifg=#e2cca9 guibg=#1d2021 |' ..
+    -- 'hi TelescopeResultsTitle              guifg=#1d2021 guibg=#80aa9e |' ..
+    -- 'hi TelescopeResultsBorder             guifg=#1d2021 guibg=#1d2021 |' ..
 })
 
 -- Gruvbox --
@@ -143,7 +143,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 })
 
 -- Onedark --
-local onedark = vim.api.nvim_create_augroup('custom_highlights_gruvbox', {})
+local onedark = vim.api.nvim_create_augroup('custom_highlights_onedark', {})
 vim.api.nvim_create_autocmd('ColorScheme', {
     group = onedark,
     pattern = 'onedark',
@@ -152,7 +152,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
     'hi DiagnosticVirtualTextWarn          guifg=#e2b86b guibg=#333230 |' ..
     'hi DiagnosticVirtualTextInfo          guifg=#80aa9e guibg=#31353f |' ..
     'hi DiagnosticVirtualTextHint          guifg=#bf68d9 guibg=#2f2a3b |' ..
-    'hi DiagnosticHint                    guifg=#bf68d9'
+    'hi DiagnosticHint                     guifg=#bf68d9'
     -- 'hi DiagnosticVirtualTextWarn          guifg=#e5c07b guibg=#333230 |' ..
     -- 'hi LineNr                             guibg=#282828  |' ..
     -- 'hi CursorLine                         guibg=#282828  |' ..
