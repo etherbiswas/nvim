@@ -37,8 +37,3 @@ blankline.setup {
     --     "IndentBlanklineIndent6",
     -- },
 }
-
-vim.cmd [[highlight IndentBlanklineContextStart guibg=#3e4452 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineChar guifg=#495162 gui=nocombine]]
--- vim.cmd [[highlight IndentBlanklineChar guifg=#3e4452 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineContextChar guifg=#7f848e gui=nocombine]]

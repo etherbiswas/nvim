@@ -45,7 +45,3 @@ gitsigns.setup({
         enable = false
     },
 })
-
-vim.cmd [[highlight GitSignsDelete guifg=#e06c75 gui=nocombine]]
-vim.cmd [[highlight GitSignsRemove guifg=#98c379 gui=nocombine]]
-vim.cmd [[highlight GitSignsChange guifg=#61afef gui=nocombine]]

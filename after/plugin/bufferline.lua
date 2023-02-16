@@ -29,36 +29,42 @@ bufferline.setup({
         separator_style = "thin"
         --separator_style = "slant" | "thick" | "thin" | {"any", "any"},
     },
-    -- highlights = {
-    --   fill = {
-    --     bg = '#282828'
-    --   },
-    --   separator = {
-    --     fg = '#282828',
-    --     bg = '#151818',
-    --   },
-    --   separator_selected = {
-    --     fg = '#282828',
-    --   }
-    -- },
+    -- Gruvbox material --
     highlights = {
         fill = {
-            bg = '#21252b'
+            bg = '#282828'
         },
         separator = {
-            fg = '#2c323c',
-            bg = '#21262b',
+            fg = '#282828',
+            bg = '#151818',
         },
         separator_selected = {
-            fg = '#2c323c',
-            -- bg = '#21262b',
-        },
-        background = {
-            fg = '#404754',
-            bg = '#21252b'
-        },
+            fg = '#282828',
+        }
     },
 })
+
+-- Onedark --
+--     highlights = {
+--         fill = {
+--             bg = '#21252b'
+--         },
+--         separator = {
+--             fg = '#2c323c',
+--             bg = '#21262b',
+--         },
+--         separator_selected = {
+--             fg = '#2c323c',
+--             -- bg = '#21262b',
+--         },
+--         background = {
+--             fg = '#404754',
+--             bg = '#21252b'
+--         },
+--     },
+-- })
+-- vim.cmd [[highlight BufferLineModifiedSelected guifg=#c0bdbd gui=nocombine]]
+-- vim.cmd [[highlight BufferLineModified guifg=#404754 gui=nocombine]]
 
 --nnoremap <silent> gb :BufferLinePick<CR>
 vim.api.nvim_set_keymap("n", "gb", "<Cmd>BufferLinePick<CR>", { noremap = true, silent = true })
@@ -71,5 +77,3 @@ vim.api.nvim_set_keymap("n", "<leader>6", "<Cmd>BufferLineGoToBuffer 6<CR>", { n
 vim.api.nvim_set_keymap("n", "<leader>7", "<Cmd>BufferLineGoToBuffer 7<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>8", "<Cmd>BufferLineGoToBuffer 8<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>9", "<Cmd>BufferLineGoToBuffer 9<CR>", { noremap = true, silent = true })
-vim.cmd [[highlight BufferLineModifiedSelected guifg=#c0bdbd gui=nocombine]]
-vim.cmd [[highlight BufferLineModified guifg=#404754 gui=nocombine]]

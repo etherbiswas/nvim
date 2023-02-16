@@ -5,7 +5,7 @@ end
 
 treesitter.setup({
     -- A list of parser names, or "all"
-    ensure_installed = { "c", "lua", "rust", "ruby", "vim", "python", "css", "scss", "haskell" },
+    ensure_installed = { "help", "javascript", "typescript", "c", "lua", "rust", "ruby", "vim", "python", "css", "scss", "haskell" },
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = true,
     auto_install = true,

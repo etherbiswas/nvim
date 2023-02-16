@@ -205,6 +205,11 @@ _G.packer_plugins = {
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-material-icon"] = {
+    loaded = true,
+    path = "/home/ether/.local/share/nvim/site/pack/packer/start/nvim-material-icon",
+    url = "https://github.com/DailyXendo/nvim-material-icon"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
@@ -228,7 +233,7 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["onedark.vim"] = {
     loaded = true,
@@ -239,6 +244,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  playground = {
+    loaded = true,
+    path = "/home/ether/.local/share/nvim/site/pack/packer/start/playground",
+    url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
