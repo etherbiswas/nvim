@@ -53,7 +53,6 @@ return packer.startup(function(use)
 
   -- Icons
   use 'nvim-tree/nvim-web-devicons'
-  use 'DailyXendo/nvim-material-icon'
 
   -- Colorscheme
   use "sainnhe/gruvbox-material"
@@ -63,11 +62,11 @@ return packer.startup(function(use)
   -- use 'navarasu/onedark.nvim'
 
   -- Statusline
-  use {
+  use 'nvim-lualine/lualine.nvim'
+  --[[ use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons' },
-  }
-
+  } ]]
   -- Bufferline
   use "akinsho/bufferline.nvim"
 
@@ -139,11 +138,11 @@ return packer.startup(function(use)
   use "RRethy/vim-illuminate"
 
   -- Dashboard (start screen)
-  use {
+  use 'goolord/alpha-nvim'
+  --[[ use {
     'goolord/alpha-nvim',
     requires = { 'nvim-tree/nvim-web-devicons' },
-  }
-
+  } ]]
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

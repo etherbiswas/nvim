@@ -11,25 +11,25 @@ devicons.setup {
   },
   -- globally enable default icons (default to false)
   -- will get overriden by `get_icons` option
-  default = true
+  default = false
 }
-devicons.set_icon {
-  ["js"] = {
-    icon = "",
-    color = "#efd81d",
-    cterm_color = "220",
-    name = "Js",
-  },
-  ["json"] = {
-    icon = "ﬥ",
-    color = "#cbcb41",
-    cterm_color = "185",
-    name = "Json",
-  },
-  ["json5"] = {
-    icon = "",
-    color = "#cbcb41",
-    cterm_color = "185",
-    name = "Json5",
-  },
-}
+-- devicons.set_icon {
+--   ["js"] = {
+--     icon = "",
+--     color = "#efd81d",
+--     cterm_color = "220",
+--     name = "Js",
+--   },
+--   ["json"] = {
+--     icon = "ﬥ",
+--     color = "#cbcb41",
+--     cterm_color = "185",
+--     name = "Json",
+--   },
+--   ["json5"] = {
+--     icon = "",
+--     color = "#cbcb41",
+--     cterm_color = "185",
+--     name = "Json5",
+--   },
+-- }

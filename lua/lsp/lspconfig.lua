@@ -9,41 +9,41 @@ for type, icon in pairs(signs) do
 end
 
 local config = {
-    virtual_text = {
-        prefix = '●'
-    },
-    signs = {
-        active = signs, -- show signs
-    },
-    update_in_insert = true,
-    underline = true,
-    severity_sort = true,
-    float = {
-        focusable = true,
-        style = "minimal",
-        border = "rounded",
-        source = "always",
-        header = "",
-        prefix = "",
-    },
+  virtual_text = {
+    prefix = '●'
+  },
+  signs = {
+    active = signs, -- show signs
+  },
+  update_in_insert = true,
+  underline = true,
+  severity_sort = true,
+  float = {
+    focusable = true,
+    style = "minimal",
+    border = "rounded",
+    source = "always",
+    header = "",
+    prefix = "",
+  },
 }
 vim.diagnostic.config(config)
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-        border = "rounded",
-    })
+  border = "rounded",
+})
 
 vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-        border = "rounded",
-    })
+  border = "rounded",
+})
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-        vim.lsp.diagnostic.on_publish_diagnostics, {
-        underline = true,
-        update_in_insert = true,
-        virtual_text = { spacing = 4, prefix = "●" },
-        severity_sort = true,
-    })
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+  underline = true,
+  update_in_insert = true,
+  virtual_text = { spacing = 4, prefix = "●" },
+  severity_sort = true,
+})
 
 
 local protocol = require('vim.lsp.protocol')
@@ -52,11 +52,11 @@ local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
 local enable_format_on_save = function(_, bufnr)
   vim.api.nvim_clear_autocmds({ group = augroup_format, buffer = bufnr })
   vim.api.nvim_create_autocmd("BufWritePre", {
-      group = augroup_format,
-      buffer = bufnr,
-      callback = function()
-        vim.lsp.buf.format({ bufnr = bufnr })
-      end,
+    group = augroup_format,
+    buffer = bufnr,
+    callback = function()
+      vim.lsp.buf.format({ bufnr = bufnr })
+    end,
   })
 end
 
@@ -89,60 +89,60 @@ end
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 nvim_lsp.lua_ls.setup {
-    capabilities = capabilities,
-    on_attach = function(client, bufnr)
-      on_attach(client, bufnr)
-      enable_format_on_save(client, bufnr)
-    end,
-    settings = {
-        Lua = {
-            diagnostics = {
-                -- Get the language server to recognize the `vim` global
-                globals = { 'vim' },
-            },
-            workspace = {
-                library = {
-                    [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                    [vim.fn.stdpath("config") .. "/lua"] = true,
-                },
-            },
+  capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    enable_format_on_save(client, bufnr)
+  end,
+  settings = {
+    Lua = {
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = { 'vim' },
+      },
+      workspace = {
+        library = {
+          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+          [vim.fn.stdpath("config") .. "/lua"] = true,
         },
+      },
     },
+  },
 }
 
 nvim_lsp.html.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
+  on_attach = on_attach,
+  capabilities = capabilities
 }
 
 nvim_lsp.cssls.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
+  on_attach = on_attach,
+  capabilities = capabilities
 }
 
 nvim_lsp.tailwindcss.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
+  on_attach = on_attach,
+  capabilities = capabilities
 }
 
 nvim_lsp.pyright.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
+  on_attach = on_attach,
+  capabilities = capabilities
 }
 
 nvim_lsp.flow.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
+  on_attach = on_attach,
+  capabilities = capabilities
 }
 
 nvim_lsp.tsserver.setup {
-    on_attach = on_attach,
-    filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-    cmd = { "typescript-language-server", "--stdio" },
-    capabilities = capabilities
+  on_attach = on_attach,
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  cmd = { "typescript-language-server", "--stdio" },
+  capabilities = capabilities
 }
 
 nvim_lsp.sourcekit.setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
+  on_attach = on_attach,
+  capabilities = capabilities,
 }

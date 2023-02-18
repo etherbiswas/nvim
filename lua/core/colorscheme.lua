@@ -143,13 +143,13 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   command =
   'hi LineNr                             guibg=#282828  |' ..
   'hi CursorLine                         guibg=#282828  |' ..
-  'hi CursorLineNr                       guibg=#282828  |' ..
-  'hi DiagnosticVirtualTextError         guifg=#db4740 guibg=#3c1f1e |' ..
-  'hi DiagnosticVirtualTextWarn          guifg=#e9b143 guibg=#473c29 |' ..
-  'hi DiagnosticVirtualTextInfo          guifg=#80aa9e guibg=#2e3b3b |' ..
-  'hi DiagnosticVirtualTextHint          guifg=#8bba7f guibg=#333e34 |' ..
-  'hi MatchParen                         guifg=#fe8019  |' ..
-  'hi CodewindowBorder                   guifg=#ea6962 |'
+  'hi CursorLineNr                       guibg=#282828  |'
+  -- 'hi DiagnosticVirtualTextError         guifg=#db4740 guibg=#3c1f1e |' ..
+  -- 'hi DiagnosticVirtualTextWarn          guifg=#e9b143 guibg=#473c29 |' ..
+  -- 'hi DiagnosticVirtualTextInfo          guifg=#80aa9e guibg=#2e3b3b |' ..
+  -- 'hi DiagnosticVirtualTextHint          guifg=#8bba7f guibg=#333e34 |' ..
+  -- 'hi MatchParen                         guifg=#fe8019  |' ..
+  -- 'hi CodewindowBorder                   guifg=#ea6962 |'
 })
 
 -- Onedark --
@@ -158,6 +158,9 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   group = onedark,
   pattern = 'onedark',
   command =
+
+  -- vim.cmd [[highlight BufferLineModifiedSelected guifg=#c0bdbd gui=nocombine]]
+  -- vim.cmd [[highlight BufferLineModified guifg=#404754 gui=nocombine]]
   'hi DiagnosticVirtualTextError         guifg=#e86671 guibg=#33282f |' ..
   'hi DiagnosticVirtualTextWarn          guifg=#e2b86b guibg=#333230 |' ..
   'hi DiagnosticVirtualTextInfo          guifg=#80aa9e guibg=#31353f |' ..
@@ -167,6 +170,10 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   'hi IndentBlanklineChar                guifg=#495162 gui=nocombine |' ..
   -- 'hi IndentBlanklineChar                guifg=#3e4452 gui=nocombine |' ..
   'hi IndentBlanklineContextChar         guifg=#7f848e gui=nocombine |' ..
+  -- 'hi IncSearch                          guifg=#61afef gui=nocombine |' ..
+  'hi IncSearch                          guifg=#98c379 gui=nocombine |' ..
+  'hi BufferLineModified                 guifg=#404754 gui=nocombine |' ..
+  'hi BufferLineModifiedSelected         guifg=#c0bdbd gui=nocombine |' ..
   'hi GitSignsDelete                     guifg=#e06c75 gui=nocombine |' ..
   'hi GitSignsRemove                     guifg=#98c379 gui=nocombine |' ..
   'hi GitSignsChange                     guifg=#61afef gui=nocombine |'
