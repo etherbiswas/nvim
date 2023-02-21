@@ -34,24 +34,6 @@ require("tokyonight").setup({
   end,
 })
 
-require("gruvbox").setup({
-  undercurl = true,
-  underline = true,
-  bold = true,
-  italic = true,
-  strikethrough = true,
-  invert_selection = false,
-  invert_signs = false,
-  invert_tabline = false,
-  invert_intend_guides = false,
-  inverse = true, -- invert background for search, diffs, statuslines and errors
-  contrast = "hard", -- can be "hard", "soft" or empty string
-  palette_overrides = {},
-  overrides = {},
-  dim_inactive = false,
-  transparent_mode = false,
-})
-
 -----------------------------------------------------------
 -- Gruvbox-Material                                      --
 -----------------------------------------------------------
@@ -62,13 +44,11 @@ vim.g.gruvbox_material_transparent_background = "0"
 vim.g.gruvbox_material_background = 'hard'
 vim.g.gruvbox_material_foreground = 'material'
 vim.g.gruvbox_material_diagnostic_virtual_text = 'colored'
-vim.g.gruvbox_material_visual = 'grey background'
--- vim.g.gruvbox_material_current_word = 'grey background'
--- vim.g.gruvbox_material_visual = 'reverse'
-vim.g.gruvbox_material_current_word = 'underline'
+vim.g.gruvbox_material_visual = 'grey background' -- 'reverse'
+vim.g.gruvbox_material_current_word = 'underline' -- 'grey background'
 vim.g.gruvbox_material_statusline_style = 'default'
 vim.g.gruvbox_contrast_dark = 'hard'
-vim.g.rainbow_active = 0
+vim.g.rainbow_active = 1
 
 -- Gruvbox Material --
 local gruvm = vim.api.nvim_create_augroup('custom_highlights_gruvboxmaterial', {})
@@ -84,10 +64,14 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   -- 'hi IndentBlanklineChar                guifg=#3e4452 gui=nocombine |' ..
   -- 'hi IndentBlanklineContextChar         guifg=#7f848e gui=nocombine |' ..
   'hi ColorColumn                        guibg=#3c3836  |' ..
-  'hi DiagnosticVirtualTextError         guifg=#db4740 guibg=#3c1f1e |' ..
-  'hi DiagnosticVirtualTextWarn          guifg=#e9b143 guibg=#473c29 |' ..
-  'hi DiagnosticVirtualTextHint          guifg=#8bba7f guibg=#333e34 |' ..
-  'hi DiagnosticVirtualTextInfo          guifg=#80aa9e guibg=#2e3b3b |' ..
+  'hi DiagnosticVirtualTextError         guifg=#ea6962 guibg=#3c1f1e |' ..
+  'hi DiagnosticVirtualTextWarn          guifg=#d8a657 guibg=#473c29 |' ..
+  'hi DiagnosticVirtualTextHint          guifg=#a9b665 guibg=#333e34 |' ..
+  -- 'hi DiagnosticVirtualTextInfo          guifg=#80aa9e guibg=#2e3b3b |' ..
+  -- 'hi DiagnosticVirtualTextError         guifg=#db4740 guibg=#3c1f1e |' ..
+  -- 'hi DiagnosticVirtualTextWarn          guifg=#e9b143 guibg=#473c29 |' ..
+  -- 'hi DiagnosticVirtualTextHint          guifg=#8bba7f guibg=#333e34 |' ..
+  -- 'hi DiagnosticVirtualTextInfo          guifg=#80aa9e guibg=#2e3b3b |' ..
   'hi NvimTreeNormal                     guibg=#181818 |' ..
   'hi NvimTreeEndOfBuffer                guibg=#181818 |' ..
   'hi NoiceCmdlinePopupBorderCmdline     guifg=#ea6962 guibg=#1d021 |' ..
@@ -133,90 +117,6 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   -- 'hi TelescopeResultsTitle              guifg=#1d2021 guibg=#80aa9e |' ..
   -- 'hi TelescopeResultsBorder             guifg=#1d2021 guibg=#1d2021 |' ..
 })
-
--- Gruvbox --
-local gruvbox = vim.api.nvim_create_augroup('custom_highlights_gruvbox', {})
-vim.api.nvim_create_autocmd('ColorScheme', {
-  group = gruvbox,
-  pattern = 'gruvbox',
-  command =
-  'hi LineNr                             guibg=#282828  |' ..
-  'hi CursorLine                         guibg=#282828  |' ..
-  'hi CursorLineNr                       guibg=#282828  |'
-  -- 'hi DiagnosticVirtualTextError         guifg=#db4740 guibg=#3c1f1e |' ..
-  -- 'hi DiagnosticVirtualTextWarn          guifg=#e9b143 guibg=#473c29 |' ..
-  -- 'hi DiagnosticVirtualTextInfo          guifg=#80aa9e guibg=#2e3b3b |' ..
-  -- 'hi DiagnosticVirtualTextHint          guifg=#8bba7f guibg=#333e34 |' ..
-  -- 'hi MatchParen                         guifg=#fe8019  |' ..
-  -- 'hi CodewindowBorder                   guifg=#ea6962 |'
-})
-
--- Onedark --
-local onedark = vim.api.nvim_create_augroup('custom_highlights_onedark', {})
-vim.api.nvim_create_autocmd('ColorScheme', {
-  group = onedark,
-  pattern = 'onedark',
-  command =
-
-  -- vim.cmd [[highlight BufferLineModifiedSelected guifg=#c0bdbd gui=nocombine]]
-  -- vim.cmd [[highlight BufferLineModified guifg=#404754 gui=nocombine]]
-  'hi DiagnosticVirtualTextError         guifg=#e86671 guibg=#33282f |' ..
-  'hi DiagnosticVirtualTextWarn          guifg=#e2b86b guibg=#333230 |' ..
-  'hi DiagnosticVirtualTextInfo          guifg=#80aa9e guibg=#31353f |' ..
-  'hi DiagnosticVirtualTextHint          guifg=#bf68d9 guibg=#2f2a3b |' ..
-  'hi DiagnosticHint                     guifg=#bf68d9 |' ..
-  'hi IndentBlanklineContextStart        guibg=#3e4452 gui=nocombine |' ..
-  'hi IndentBlanklineChar                guifg=#495162 gui=nocombine |' ..
-  -- 'hi IndentBlanklineChar                guifg=#3e4452 gui=nocombine |' ..
-  'hi IndentBlanklineContextChar         guifg=#7f848e gui=nocombine |' ..
-  -- 'hi IncSearch                          guifg=#61afef gui=nocombine |' ..
-  'hi IncSearch                          guifg=#98c379 gui=nocombine |' ..
-  'hi BufferLineModified                 guifg=#404754 gui=nocombine |' ..
-  'hi BufferLineModifiedSelected         guifg=#c0bdbd gui=nocombine |' ..
-  'hi GitSignsDelete                     guifg=#e06c75 gui=nocombine |' ..
-  'hi GitSignsRemove                     guifg=#98c379 gui=nocombine |' ..
-  'hi GitSignsChange                     guifg=#61afef gui=nocombine |'
-  -- 'hi DiagnosticVirtualTextWarn          guifg=#e5c07b guibg=#333230 |' ..
-  -- 'hi LineNr                             guibg=#282828  |' ..
-  -- 'hi CursorLine                         guibg=#282828  |' ..
-  -- 'hi CursorLineNr                       guibg=#282828  |' ..
-  -- 'hi DiagnosticVirtualTextError         guifg=#e55561 guibg=#33282f |' ..
-  -- 'hi DiagnosticVirtualTextHint          guifg=#8bba7f guibg=#333e34 |' ..
-  -- 'hi MatchParen                         guifg=#fe8019 |' ..
-  -- 'hi NvimTreeNormal                     guibg=#181818 |' ..
-  -- 'hi NvimTreeEndOfBuffer                guibg=#181818 |' ..
-  -- 'hi TelescopePromptBorder              guifg=#ea6962 guibg=#282828 |' ..
-  -- 'hi NoiceCmdlinePopupBorderCmdline     guifg=#ea6962 guibg=#282828 |' ..
-  -- 'hi TelescopePromptNormal              guifg=#ea6962 guibg=#282828 |' ..
-  -- 'hi TelescopePromptBorder              guifg=#ea6962 guibg=#282828 |' ..
-  -- 'hi TelescopePromptTitle               guifg=#ea6962 guibg=#282828 |' ..
-  -- 'hi TelescopePromptPrefix              guifg=#ea6962 guibg=#282828 |' ..
-  -- 'hi TelescopePromptCounter             guifg=#ea6962 guibg=#282828 |' ..
-  -- 'hi TelescopePreviewTitle              guifg=#89b482 guibg=#282828 |' ..
-  -- 'hi TelescopePreviewBorder             guifg=#89b482 guibg=#282828 |' ..
-  -- 'hi TelescopeResultsTitle              guifg=#89b482 guibg=#282828 |' ..
-  -- 'hi TelescopeResultsBorder             guifg=#89b482 guibg=#282828 |' ..
-  -- 'hi TelescopeMatching                  guifg=#d8a657 guibg=#282828 |' ..
-  -- 'hi TelescopeSelection                 guifg=#ffffff guibg=#32302f |' ..
-  -- 'hi FloatBorder                        guifg=#ea6962 guibg=#282828 |' ..
-  -- 'hi BqfPreviewBorder                   guifg=#ea6962 guibg=#282828 |' ..
-  -- 'hi IndentBlanklineContextChar         guifg=#d3869b |' ..
-  -- 'hi markid1                            guifg=#ff8f88 |' ..
-  -- 'hi markid2                            guifg=#ffb074 |' ..
-  -- 'hi markid3                            guifg=#cfdc8b |' ..
-  -- 'hi markid4                            guifg=#a3d4c9 |' ..
-  -- 'hi markid5                            guifg=#f9acc1 |' ..
-  -- 'hi markid6                            guifg=#afdaa8 |' ..
-  -- 'hi markid7                            guifg=#fecc7d |' ..
-  -- 'hi markid8                            guifg=#eed8b2 |' ..
-  -- 'hi markid9                            guifg=#ffedc7 |' ..
-  -- 'hi markid10                           guifg=#cebfaa |' ..
-  -- Enable transparency
-  -- 'hi Normal                             guibg=NONE |' ..
-  -- 'hi NormalFloat                        guibg=NONE |'
-  -- 'hi CodewindowBorder                   guifg=#ea6962 |'
-})
-
 
 local colorscheme = "gruvbox-material"
 

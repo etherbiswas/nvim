@@ -1,6 +1,6 @@
 local fn = vim.fn
 
--- Automatically install packer
+-- Automatically install packer --
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system {
@@ -15,7 +15,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
--- Autocommand that reloads neovim whenever you save the packer_init.lua file
+-- Autocommand that reloads neovim whenever you save the packer_init.lua file --
 vim.cmd [[
   augroup packer_user_config
     autocmd!
@@ -38,9 +38,8 @@ packer.init {
   },
 }
 
--- Install Plugins
+-- Install Plugins --
 return packer.startup(function(use)
-  -- Add your plugins here:
   use "wbthomason/packer.nvim" -- packer can manage itself
 
   use "nvim-lua/popup.nvim"
@@ -48,7 +47,7 @@ return packer.startup(function(use)
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
   use "norcalli/nvim-colorizer.lua"
-  use "luochen1990/rainbow" -- Color Tags in html
+  use "luochen1990/rainbow"
   use "folke/which-key.nvim"
 
   -- Icons
@@ -56,9 +55,7 @@ return packer.startup(function(use)
 
   -- Colorscheme
   use "sainnhe/gruvbox-material"
-  use "ellisonleao/gruvbox.nvim"
   use 'folke/tokyonight.nvim'
-  use 'joshdick/onedark.vim'
   -- use 'navarasu/onedark.nvim'
 
   -- Statusline

@@ -7,47 +7,47 @@ local autocmd = vim.api.nvim_create_autocmd
 -- Briefly highlight a selection on yank
 augroup('YankHighlight', { clear = true })
 autocmd('TextYankPost', {
-    group = 'YankHighlight',
-    callback = function()
-      vim.highlight.on_yank()
-    end
+  group = 'YankHighlight',
+  callback = function()
+    vim.highlight.on_yank()
+  end
 })
 
 -- Set relative number if in normal mode
 augroup('RelativeNumber', { clear = true })
 autocmd({ "BufEnter", "FocusGained", "InsertLeave", "CmdlineLeave", "WinEnter" }, {
-    pattern = "*",
-    group = 'RelativeNumber',
-    callback = function()
-      if vim.o.nu and vim.api.nvim_get_mode().mode ~= "i" then
-        vim.opt.relativenumber = true
-      end
-    end,
+  pattern = "*",
+  group = 'RelativeNumber',
+  callback = function()
+    if vim.o.nu and vim.api.nvim_get_mode().mode ~= "i" then
+      vim.opt.relativenumber = true
+    end
+  end,
 })
 
 -- Set absolute number if in normal mode
 augroup('AbsoluteNumber', { clear = true })
 autocmd({ "BufLeave", "FocusLost", "InsertEnter", "CmdlineEnter", "WinLeave" }, {
-    pattern = "*",
-    group = 'AbsoluteNumber',
-    callback = function()
-      if vim.o.nu then
-        vim.opt.relativenumber = false
-        vim.cmd "redraw"
-      end
-    end,
+  pattern = "*",
+  group = 'AbsoluteNumber',
+  callback = function()
+    if vim.o.nu then
+      vim.opt.relativenumber = false
+      vim.cmd "redraw"
+    end
+  end,
 })
 
 -- Remove whitespace on save
 autocmd('BufWritePre', {
-    pattern = '',
-    command = ":%s/\\s\\+$//e"
+  pattern = '',
+  command = ":%s/\\s\\+$//e"
 })
 
 -- Don't auto commenting new lines
 autocmd('BufEnter', {
-    pattern = '',
-    command = 'set fo-=c fo-=r fo-=o'
+  pattern = '',
+  command = 'set fo-=c fo-=r fo-=o'
 })
 
 -----------------------------------------------------------
@@ -67,19 +67,19 @@ autocmd('Filetype', {
 -- Set indentation to 2 spaces
 augroup('setIndent', { clear = true })
 autocmd('Filetype', {
-    group = 'setIndent',
-    pattern = { 'xml', 'html', 'xhtml', 'css', 'scss', 'javascript', 'typescript',
-        'yaml', 'lua'
-    },
-    command = 'setlocal shiftwidth=2 tabstop=2'
+  group = 'setIndent',
+  pattern = { 'xml', 'html', 'xhtml', 'css', 'scss', 'javascript', 'typescript',
+    'yaml', 'lua'
+  },
+  command = 'setlocal shiftwidth=2 tabstop=2'
 })
 
 augroup('setRainbow', { clear = true })
 autocmd('Filetype', {
-    group = 'setRainbow',
-    pattern = { 'markdown', 'html'
-    },
-    command = 'RainbowToggleOn'
+  group = 'setRainbow',
+  pattern = { 'markdown', 'html'
+  },
+  command = 'RainbowToggleOn'
 })
 
 -----------------------------------------------------------
@@ -87,23 +87,23 @@ autocmd('Filetype', {
 -----------------------------------------------------------
 -- Open a Terminal on the right tab
 autocmd('CmdlineEnter', {
-    command = 'command! Term :botright vsplit term://$SHELL'
+  command = 'command! Term :botright vsplit term://$SHELL'
 })
 
 -- Enter insert mode when switching to terminal
 autocmd('TermOpen', {
-    command = 'setlocal listchars= nonumber norelativenumber nocursorline',
+  command = 'setlocal listchars= nonumber norelativenumber nocursorline',
 })
 
 autocmd('TermOpen', {
-    pattern = '',
-    command = 'startinsert'
+  pattern = '',
+  command = 'startinsert'
 })
 
 -- Close terminal buffer on process exit
 autocmd('BufLeave', {
-    pattern = 'term://*',
-    command = 'stopinsert'
+  pattern = 'term://*',
+  command = 'stopinsert'
 })
 
 local function open_nvim_tree(data)

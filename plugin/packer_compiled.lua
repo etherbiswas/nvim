@@ -135,11 +135,6 @@ _G.packer_plugins = {
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/gruvbox-material",
     url = "https://github.com/sainnhe/gruvbox-material"
   },
-  ["gruvbox.nvim"] = {
-    loaded = true,
-    path = "/home/ether/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
-  },
   ["impatient.nvim"] = {
     loaded = true,
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/impatient.nvim",
@@ -224,11 +219,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
-  },
-  ["onedark.vim"] = {
-    loaded = true,
-    path = "/home/ether/.local/share/nvim/site/pack/packer/start/onedark.vim",
-    url = "https://github.com/joshdick/onedark.vim"
   },
   ["packer.nvim"] = {
     loaded = true,

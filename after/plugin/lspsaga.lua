@@ -5,87 +5,18 @@ end
 
 saga.setup({
   ui = {
-    theme = 'round',
     border = 'solid',
     winblend = 0,
     expand = '',
     collapse = '',
     preview = ' ',
     code_action = '',
-    diagnostic = '🐞',
     incoming = ' ',
     outgoing = ' ',
-    colors = {
-      --float window normal bakcground color
-      normal_bg = '#1d1536',
-      --title background color
-      title_bg = '#afd700',
+    kind = {
+      -- File = { '', '@comment' },
+      -- Folder = { ' ', '@comment' },
     },
-    --   kind = {
-    --     File = { '', '#7c6f64' },
-    --     Folder = { ' ', '#8bba7f' },
-    --     Module = { ' ', '#8bba7f' },
-    --     Namespace = { 'ﴯ ', '#8bba7f' },
-    --     Package = { '  ', '#d3869b' },
-    --     Class = { 'ﴯ ', '#80aa9e' },
-    --     Constant = { ' ', '#d3869b' },
-    --     Method = { ' ', '#b0b846' },
-    --     Variable = { ' ', '#b0b846' },
-    --     Function = { ' ', '#b0b846' },
-    --     Property = { 'ﰠ ', '#2e3b3b' },
-    --     Interface = { '', '#8bba7f' },
-    --     Field = { 'ﰠ ', '#80aa9e' },
-    --     Constructor = { ' ', '#b0b846' },
-    --     String = { ' ', '#b0b846' },
-    --     Number = { ' ', '#d3869b' },
-    --     Boolean = { '◩ ', '#f2594b' },
-    --     Array = { ' ', '#f2594b' },
-    --     Object = { ' ', '#f28534' },
-    --     Key = { '', '#80aa9e' },
-    --     Null = { 'ﳠ ', '#d3869b' },
-    --     EnumMember = { ' ', '#80aa9e' },
-    --     Struct = { ' ', '#d3869b' },
-    --     Event = { ' ', '#80aa9e' },
-    --     Operator = { '', '#b0b846' },
-    --     TypeParameter = { ' ', '#b0b846' },
-    --     TypeAlias = { ' ', '#b0b846' },
-    --     Parameter = { ' ', '#80aa9e' },
-    --     Macro = { '  ', '#f2594b' },
-    --     StaticMethod = { 'ﴂ ', '#f28534' },
-    --   }
-    -- },
-    -- kind = {
-    --   File = { '', '#abb2bf' },
-    --   Folder = { ' ', '#61afef' },
-    --   Module = { ' ', '#98c379' },
-    --   Namespace = { 'ﴯ ', '#98c379' },
-    --   Package = { '  ', '#c678dd' },
-    --   Class = { 'ﴯ ', '#61afef' },
-    --   Constant = { ' ', '#e06c75' },
-    --   Method = { ' ', '#c678dd' },
-    --   Variable = { ' ', '#98ce79' },
-    --   Function = { ' ', '#98ce79' },
-    --   Property = { 'ﰠ ', '#abb2bf' },
-    --   Interface = { '', '#56b6c2' },
-    --   Field = { 'ﰠ ', '#61afef' },
-    --   Constructor = { ' ', '#abb2bf' },
-    --   String = { ' ', '#e06c75' },
-    --   Number = { ' ', '#c678dd' },
-    --   Boolean = { '◩ ', '#e06c75' },
-    --   Array = { ' ', '#e06c75' },
-    --   Object = { ' ', '#e5c078' },
-    --   Key = { '', '#61afef' },
-    --   Null = { 'ﳠ ', '#56b6c2' },
-    --   EnumMember = { ' ', '#56b6c2' },
-    --   Struct = { ' ', '#c678dd' },
-    --   Event = { ' ', '#61afef' },
-    --   Operator = { '', '#98c379' },
-    --   TypeParameter = { ' ', '#98c379' },
-    --   TypeAlias = { ' ', '#98c379' },
-    --   Parameter = { ' ', '#61afef' },
-    --   Macro = { '  ', '#e06c75' },
-    --   StaticMethod = { 'ﴂ ', '#e5c07b' },
-    -- }
   },
   diagnostic = {
     twice_into = false,
@@ -188,12 +119,7 @@ saga.setup({
 })
 
 -- Gruvbox material --
--- vim.cmd([[highlight LspSagaWinbarSep gui=NONE, guifg=#7c6f64]])
--- vim.cmd([[highlight LspSagaWinbarFile gui=NONE, guifg=#7c6f64]])
--- vim.cmd([[highlight LspSagaWinbarWord gui=NONE, guifg=#7c6f64]])
-
--- Onedark --
--- vim.cmd([[highlight LspSagaWinbarSep gui=NONE, guifg=#abb2bf]])
--- vim.cmd([[highlight LspSagaWinbarFile gui=NONE, guifg=#abb2bf]])
--- vim.cmd([[highlight LspSagaWinbarFolderName gui=NONE, guifg=#abb2bf]])
--- vim.cmd([[highlight LspSagaWinbarWord gui=NONE, guifg=#abb2bf]])
+vim.cmd([[highlight SagaWinbarSep gui=NONE, guifg=#7c6f64]])
+vim.cmd([[highlight SagaWinbarFolderName gui=NONE, guifg=#e2cca9]])
+vim.cmd([[highlight SagaWinbarFolder gui=NONE, guifg=#8bba7f]])
+vim.cmd([[highlight SagaWinbarFilename gui=NONE, guifg=#7c6f64]])
