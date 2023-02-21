@@ -89,11 +89,6 @@ _G.packer_plugins = {
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
-  base46 = {
-    loaded = true,
-    path = "/home/ether/.local/share/nvim/site/pack/packer/start/base46",
-    url = "https://github.com/NvChad/base46"
-  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -184,11 +179,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ether/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
-  },
-  nvim = {
-    loaded = true,
-    path = "/home/ether/.local/share/nvim/site/pack/packer/start/nvim",
-    url = "https://github.com/catppuccin/nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,

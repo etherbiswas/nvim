@@ -54,38 +54,38 @@ saga.setup({
     --     StaticMethod = { 'ﴂ ', '#f28534' },
     --   }
     -- },
-    kind = {
-      File = { '', '#abb2bf' },
-      Folder = { ' ', '#61afef' },
-      Module = { ' ', '#98c379' },
-      Namespace = { 'ﴯ ', '#98c379' },
-      Package = { '  ', '#c678dd' },
-      Class = { 'ﴯ ', '#61afef' },
-      Constant = { ' ', '#e06c75' },
-      Method = { ' ', '#c678dd' },
-      Variable = { ' ', '#98ce79' },
-      Function = { ' ', '#98ce79' },
-      Property = { 'ﰠ ', '#abb2bf' },
-      Interface = { '', '#56b6c2' },
-      Field = { 'ﰠ ', '#61afef' },
-      Constructor = { ' ', '#abb2bf' },
-      String = { ' ', '#e06c75' },
-      Number = { ' ', '#c678dd' },
-      Boolean = { '◩ ', '#e06c75' },
-      Array = { ' ', '#e06c75' },
-      Object = { ' ', '#e5c078' },
-      Key = { '', '#61afef' },
-      Null = { 'ﳠ ', '#56b6c2' },
-      EnumMember = { ' ', '#56b6c2' },
-      Struct = { ' ', '#c678dd' },
-      Event = { ' ', '#61afef' },
-      Operator = { '', '#98c379' },
-      TypeParameter = { ' ', '#98c379' },
-      TypeAlias = { ' ', '#98c379' },
-      Parameter = { ' ', '#61afef' },
-      Macro = { '  ', '#e06c75' },
-      StaticMethod = { 'ﴂ ', '#e5c07b' },
-    }
+    -- kind = {
+    --   File = { '', '#abb2bf' },
+    --   Folder = { ' ', '#61afef' },
+    --   Module = { ' ', '#98c379' },
+    --   Namespace = { 'ﴯ ', '#98c379' },
+    --   Package = { '  ', '#c678dd' },
+    --   Class = { 'ﴯ ', '#61afef' },
+    --   Constant = { ' ', '#e06c75' },
+    --   Method = { ' ', '#c678dd' },
+    --   Variable = { ' ', '#98ce79' },
+    --   Function = { ' ', '#98ce79' },
+    --   Property = { 'ﰠ ', '#abb2bf' },
+    --   Interface = { '', '#56b6c2' },
+    --   Field = { 'ﰠ ', '#61afef' },
+    --   Constructor = { ' ', '#abb2bf' },
+    --   String = { ' ', '#e06c75' },
+    --   Number = { ' ', '#c678dd' },
+    --   Boolean = { '◩ ', '#e06c75' },
+    --   Array = { ' ', '#e06c75' },
+    --   Object = { ' ', '#e5c078' },
+    --   Key = { '', '#61afef' },
+    --   Null = { 'ﳠ ', '#56b6c2' },
+    --   EnumMember = { ' ', '#56b6c2' },
+    --   Struct = { ' ', '#c678dd' },
+    --   Event = { ' ', '#61afef' },
+    --   Operator = { '', '#98c379' },
+    --   TypeParameter = { ' ', '#98c379' },
+    --   TypeAlias = { ' ', '#98c379' },
+    --   Parameter = { ' ', '#61afef' },
+    --   Macro = { '  ', '#e06c75' },
+    --   StaticMethod = { 'ﴂ ', '#e5c07b' },
+    -- }
   },
   diagnostic = {
     twice_into = false,
@@ -193,7 +193,7 @@ saga.setup({
 -- vim.cmd([[highlight LspSagaWinbarWord gui=NONE, guifg=#7c6f64]])
 
 -- Onedark --
-vim.cmd([[highlight LspSagaWinbarSep gui=NONE, guifg=#abb2bf]])
-vim.cmd([[highlight LspSagaWinbarFile gui=NONE, guifg=#abb2bf]])
-vim.cmd([[highlight LspSagaWinbarFolderName gui=NONE, guifg=#abb2bf]])
-vim.cmd([[highlight LspSagaWinbarWord gui=NONE, guifg=#abb2bf]])
+-- vim.cmd([[highlight LspSagaWinbarSep gui=NONE, guifg=#abb2bf]])
+-- vim.cmd([[highlight LspSagaWinbarFile gui=NONE, guifg=#abb2bf]])
+-- vim.cmd([[highlight LspSagaWinbarFolderName gui=NONE, guifg=#abb2bf]])
+-- vim.cmd([[highlight LspSagaWinbarWord gui=NONE, guifg=#abb2bf]])

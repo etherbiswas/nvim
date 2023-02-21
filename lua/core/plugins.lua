@@ -63,10 +63,7 @@ return packer.startup(function(use)
 
   -- Statusline
   use 'nvim-lualine/lualine.nvim'
-  --[[ use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons' },
-  } ]]
+
   -- Bufferline
   use "akinsho/bufferline.nvim"
 
@@ -90,7 +87,6 @@ return packer.startup(function(use)
 
   -- Indent line
   use 'lukas-reineke/indent-blankline.nvim'
-  use 'NvChad/base46'
 
   -- Autocomplete
   use {
@@ -103,7 +99,7 @@ return packer.startup(function(use)
       "rafamadriz/friendly-snippets",
       'L3MON4D3/LuaSnip',
       'onsails/lspkind-nvim',
-      'glepnir/lspsaga.nvim' -- LSP UIs
+      'glepnir/lspsaga.nvim'
     },
   }
 
@@ -139,10 +135,7 @@ return packer.startup(function(use)
 
   -- Dashboard (start screen)
   use 'goolord/alpha-nvim'
-  --[[ use {
-    'goolord/alpha-nvim',
-    requires = { 'nvim-tree/nvim-web-devicons' },
-  } ]]
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

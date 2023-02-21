@@ -78,13 +78,12 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   command =
   'hi LineNr                             guibg=#282828  |' ..
   'hi CursorLineNr                       guibg=#282828  |' ..
-  'hi IndentBlanklineContextStart        guibg=#3c3836 gui=nocombine|' ..
+  'hi IndentBlanklineContextStart        guibg=#504945 gui=nocombine|' ..
   'hi IndentBlanklineContextChar         guifg=#504945 |' ..
   'hi IndentBlanklineChar                guifg=#32302f gui=nocombine |' ..
   -- 'hi IndentBlanklineChar                guifg=#3e4452 gui=nocombine |' ..
   -- 'hi IndentBlanklineContextChar         guifg=#7f848e gui=nocombine |' ..
-  -- 'hi ColorColumn                        guibg=#3c3836  |' ..
-  'hi ColorColumn                        guibg=#282828  |' ..
+  'hi ColorColumn                        guibg=#3c3836  |' ..
   'hi DiagnosticVirtualTextError         guifg=#db4740 guibg=#3c1f1e |' ..
   'hi DiagnosticVirtualTextWarn          guifg=#e9b143 guibg=#473c29 |' ..
   'hi DiagnosticVirtualTextHint          guifg=#8bba7f guibg=#333e34 |' ..
@@ -177,22 +176,6 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   'hi GitSignsDelete                     guifg=#e06c75 gui=nocombine |' ..
   'hi GitSignsRemove                     guifg=#98c379 gui=nocombine |' ..
   'hi GitSignsChange                     guifg=#61afef gui=nocombine |'
-  -- 'hi LspSagaWinbarArray                 guifg=#e06c75 |' ..
-  -- 'hi LspSagaWinbarBoolean               guifg=#e06c75 |' ..
-  -- 'hi LspSagaWinbarClass                 guifg=#61afef |' ..
-  -- 'hi LspSagaWinbarConstant              guifg=#e06c75 |' ..
-  -- 'hi LspSagaWinbarConstructor           guifg=#abb2bf |' ..
-  -- 'hi LspSagaWinbarEnumMember            guifg=#56b6c2 |' ..
-  -- 'hi LspSagaWinbarEvent                 guifg=##61afef|' ..
-  -- 'hi LspSagaWinbarSep                   guifg=#abb2bf gui=NONE |' ..
-  -- 'hi LspSagaWinbarField                 guifg=#61afef |' ..
-  -- 'hi LspSagaWinbarFile                  guifg=#abb2bf gui=NONE |' ..
-  -- 'hi LspSagaWinbarFolder                guifg=#61afef |' ..
-  -- 'hi LspSagaWinbarFolderName            guifg=#abb2bf gui=NONE |' ..
-  -- 'hi LspSagaWinbarFunction              guifg=#98ce79 |' ..
-  -- 'hi LspSagaWinbarInterface             guifg=#56b6c2 |' ..
-  -- 'hi LspSagaWinbarKey                   guifg=#61afef |' ..
-  -- 'hi LspSagaWinbarWord                  guifg=#abb2bf gui=NONE |'
   -- 'hi DiagnosticVirtualTextWarn          guifg=#e5c07b guibg=#333230 |' ..
   -- 'hi LineNr                             guibg=#282828  |' ..
   -- 'hi CursorLine                         guibg=#282828  |' ..
@@ -235,7 +218,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 })
 
 
-local colorscheme = "onedark"
+local colorscheme = "gruvbox-material"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then

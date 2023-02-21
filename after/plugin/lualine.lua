@@ -76,6 +76,3 @@ lualine.setup({
   inactive_winbar = {},
   extensions = {}
 })
-vim.cmd([[highlight lualine_a_command gui=bold, guibg=#56b6c2]])
--- vim.cmd([[highlight lualine_b_normal gui=NONE, guifg=#61afef]])
--- vim.cmd([[highlight lualine_b_normal gui=NONE, guifg=#98c379]])
