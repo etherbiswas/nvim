@@ -5,11 +5,11 @@ end
 
 saga.setup({
   ui = {
+    title = true,
     border = 'solid',
     winblend = 0,
     expand = '',
     collapse = '',
-    preview = ' ',
     code_action = '',
     incoming = ' ',
     outgoing = ' ',
@@ -19,9 +19,18 @@ saga.setup({
     },
   },
   diagnostic = {
+    on_insert = true,
+    on_follow = true,
     twice_into = false,
     show_code_action = true,
     show_source = true,
+    jump_num_shortcut = true,
+    --1 is max
+    max_width = 0.7,
+    custom_fix = nil,
+    custom_msg = nil,
+    text_hl_follow = true,
+    border_follow = true,
     keys = {
       exec_action = 'o',
       quit = 'q',
@@ -119,14 +128,14 @@ saga.setup({
 })
 
 -- Gruvbox material --
-vim.cmd([[highlight SagaWinbarVariable gui=NONE, guifg=#d3869b]])
-vim.cmd([[highlight SagaWinbarSep gui=NONE, guifg=#7c6f64]])
-vim.cmd([[highlight SagaWinbarFolderName gui=NONE, guifg=#e2cca9]])
-vim.cmd([[highlight SagaWinbarFolder gui=NONE, guifg=#8bba7f]])
-vim.cmd([[highlight SagaWinbarFilename gui=NONE, guifg=#7c6f64]])
+-- vim.cmd([[highlight SagaWinbarVariable gui=NONE, guifg=#d3869b]])
+-- vim.cmd([[highlight SagaWinbarSep gui=NONE, guifg=#7c6f64]])
+-- vim.cmd([[highlight SagaWinbarFolderName gui=NONE, guifg=#e2cca9]])
+-- vim.cmd([[highlight SagaWinbarFolder gui=NONE, guifg=#8bba7f]])
+-- vim.cmd([[highlight SagaWinbarFilename gui=NONE, guifg=#7c6f64]])
 
 -- OneDark --
--- vim.cmd([[highlight SagaWinbarSep gui=NONE, guifg=#abb2bf]])
--- vim.cmd([[highlight SagaWinbarFile gui=NONE, guifg=#abb2bf]])
--- vim.cmd([[highlight SagaWinbarFolderName gui=NONE, guifg=#abb2bf]])
--- vim.cmd([[highlight SagaWinbarWord gui=NONE, guifg=#abb2bf]])
+vim.cmd([[highlight SagaWinbarSep gui=NONE, guifg=#abb2bf]])
+vim.cmd([[highlight SagaWinbarFile gui=NONE, guifg=#abb2bf]])
+vim.cmd([[highlight SagaWinbarFolderName gui=NONE, guifg=#abb2bf]])
+vim.cmd([[highlight SagaWinbarWord gui=NONE, guifg=#abb2bf]])

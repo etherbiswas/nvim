@@ -103,6 +103,9 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   'hi DiagnosticVirtualTextWarn          guifg=#e2b86b guibg=#333230 |' ..
   'hi DiagnosticVirtualTextInfo          guifg=#48b0bd guibg=#233138 |' ..
   'hi DiagnosticVirtualTextHint          guifg=#bf68d9 guibg=#2f2a3b |' ..
+  'hi Visual                            guibg=#323641 |' ..
+  'hi Search                            guibg=#61afef |' ..
+  'hi IncSearch                         guibg=#e86671 guifg=#282c34 |' ..
   'hi DiagnosticHint                    guifg=#bf68d9 |' ..
   -- 'hi DiagnosticVirtualTextWarn          guifg=#e5c07b guibg=#333230 |' ..
   -- 'hi DiagnosticVirtualTextHint          guifg=#8bba7f guibg=#333e34 |' ..
@@ -161,6 +164,10 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   'hi DiagnosticVirtualTextWarn          guifg=#d8a657 guibg=#473c29 |' ..
   'hi DiagnosticVirtualTextHint          guifg=#a9b665 guibg=#333e34 |' ..
   'hi DiagnosticVirtualTextInfo          guifg=#80aa9e guibg=#2e3b3b |' ..
+  'hi LspSagaDiagnosticTextError         guifg=#ea6962 guibg=#3c1f1e |' ..
+  'hi LspSagaDiagnosticTextWarn          guifg=#d8a657 guibg=#473c29 |' ..
+  'hi LspSagaDiagnosticTextHint          guifg=#a9b665 guibg=#333e34 |' ..
+  'hi LspSagaDiagnosticTextInfo          guifg=#80aa9e guibg=#2e3b3b |' ..
   -- 'hi DiagnosticVirtualTextInfo          guifg=#7daea3 guibg=#2e3b3b |' ..
   -- 'hi DiagnosticVirtualTextError         guifg=#db4740 guibg=#3c1f1e |' ..
   -- 'hi DiagnosticVirtualTextWarn          guifg=#e9b143 guibg=#473c29 |' ..
@@ -211,7 +218,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   -- 'hi TelescopeResultsBorder             guifg=#1d2021 guibg=#1d2021 |' ..
 })
 
-local colorscheme = "gruvbox-material"
+local colorscheme = "onedark"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
