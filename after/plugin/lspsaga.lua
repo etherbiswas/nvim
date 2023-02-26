@@ -5,7 +5,7 @@ end
 
 saga.setup({
   ui = {
-    title = true,
+    title = false,
     border = 'solid',
     winblend = 0,
     expand = '',
@@ -20,13 +20,13 @@ saga.setup({
   },
   diagnostic = {
     on_insert = true,
-    on_follow = true,
-    twice_into = false,
+    on_insert_follow = true,
+    insert_winblend = 0,
     show_code_action = true,
     show_source = true,
-    jump_num_shortcut = true,
+    jump_num_shortcut = false,
     --1 is max
-    max_width = 0.7,
+    max_width = 1,
     custom_fix = nil,
     custom_msg = nil,
     text_hl_follow = true,

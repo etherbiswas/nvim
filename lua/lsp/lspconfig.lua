@@ -9,9 +9,10 @@ for type, icon in pairs(signs) do
 end
 
 local config = {
-  virtual_text = {
-    prefix = '●'
-  },
+  virtual_text = false,
+  -- virtual_text = {
+  --   prefix = '●'
+  -- },
   signs = {
     active = signs, -- show signs
   },
@@ -19,10 +20,10 @@ local config = {
   underline = true,
   severity_sort = true,
   float = {
-    focusable = true,
+    source = "always",
     style = "minimal",
     border = "rounded",
-    source = "always",
+    focusable = true,
     header = "",
     prefix = "",
   },
@@ -39,9 +40,10 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.s
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
+  virtual_text = false,
   underline = true,
   update_in_insert = true,
-  virtual_text = { spacing = 4, prefix = "●" },
+  -- virtual_text = { spacing = 4, prefix = "●" },
   severity_sort = true,
 })
 
