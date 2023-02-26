@@ -75,3 +75,7 @@ vim.api.nvim_set_keymap("n", "<leader>6", "<Cmd>BufferLineGoToBuffer 6<CR>", { n
 vim.api.nvim_set_keymap("n", "<leader>7", "<Cmd>BufferLineGoToBuffer 7<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>8", "<Cmd>BufferLineGoToBuffer 8<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>9", "<Cmd>BufferLineGoToBuffer 9<CR>", { noremap = true, silent = true })
+
+-- Onedark --
+-- vim.cmd [[highlight BufferLineModifiedSelected guifg=#c0bdbd gui=nocombine]]
+-- vim.cmd [[highlight BufferLineModified guifg=#404754 gui=nocombine]]

@@ -56,7 +56,7 @@ return packer.startup(function(use)
   -- Colorscheme
   use "sainnhe/gruvbox-material"
   use 'folke/tokyonight.nvim'
-  -- use 'navarasu/onedark.nvim'
+  --use 'navarasu/onedark.nvim'
 
   -- Statusline
   use 'nvim-lualine/lualine.nvim'

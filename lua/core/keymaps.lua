@@ -26,6 +26,7 @@ map("n", "gh", "^")
 map("n", "gl", "$")
 map("n", "<C-j>", "2gj")
 map("n", "<C-k>", "2gk")
+map("n", "<C-a>", "ggVG")
 map("n", "<C-q>", ":q!<CR>")
 map("n", "<A-q>", ":qa!<CR>")
 -- File write/edit options
@@ -56,6 +57,7 @@ map("i", "<C-l>", "<right>")
 
 -- File write/Edit options
 map("i", "<C-d>", "<BS>")
+map("i", "<C-a>", "<Esc>ggVG")
 map("i", "<C-x>", "<Esc>:wq!<CR>")
 map("i", "<C-q>", "<Esc>:q!<CR>")
 map("i", "<C-s>", "<Esc>:w!<CR>")
@@ -70,6 +72,13 @@ map("i", "<C-b>", "<Esc>:NvimTreeToggle<CR>")
 map("n", "<C-m>", ":RunFile<CR>")
 
 -- Visual --
+map("v", "j", "gj")
+map("v", "k", "gk")
+map("v", "gh", "^")
+map("v", "gl", "$")
+map("v", "<C-j>", "2gj")
+map("v", "<C-k>", "2gk")
+
 -- Stay in indent mode
 map("v", "<", "<gv")
 map("v", ">", ">gv")
