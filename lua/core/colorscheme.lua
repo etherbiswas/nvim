@@ -103,10 +103,37 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   'hi DiagnosticVirtualTextWarn          guifg=#e2b86b guibg=#333230 |' ..
   'hi DiagnosticVirtualTextInfo          guifg=#48b0bd guibg=#233138 |' ..
   'hi DiagnosticVirtualTextHint          guifg=#bf68d9 guibg=#2f2a3b |' ..
-  'hi Visual                            guibg=#323641 |' ..
-  'hi Search                            guibg=#61afef |' ..
-  'hi IncSearch                         guibg=#e86671 guifg=#282c34 |' ..
-  'hi DiagnosticHint                    guifg=#bf68d9 |' ..
+  'hi Visual                             guibg=#323641 |' ..
+  'hi Search                             guibg=#61afef |' ..
+  'hi IncSearch                          guibg=#e86671 guifg=#282c34 |' ..
+  'hi CmpItemKindDefault                 guifg=#c678dd |' ..
+  'hi CmpItemKindArray                   guifg=#e5c07b |' ..
+  'hi CmpItemKindClass                   guifg=#e5c07b |' ..
+  'hi CmpItemKindColor                   guifg=#98c379 |' ..
+  'hi CmpItemKindConstant                guifg=#cc9057 |' ..
+  'hi CmpItemKindConstructor             guifg=#61afef |' ..
+  'hi CmpItemKindEnum                    guifg=#c678dd |' ..
+  'hi CmpItemKindEnumMember              guifg=#e5c07b |' ..
+  'hi CmpItemKindEvent                   guifg=#e5c07b |' ..
+  'hi CmpItemKindField                   guifg=#c678dd |' ..
+  'hi CmpItemKindFile                    guifg=#61afef |' ..
+  'hi CmpItemKindFolder                  guifg=#cc9057 |' ..
+  'hi CmpItemKindFunction                guifg=#61afef |' ..
+  'hi CmpItemKindInterface               guifg=#98c379 |' ..
+  'hi CmpItemKindKeyword                 guifg=#56b6c2 |' ..
+  'hi CmpItemKindMethod                  guifg=#61afef |' ..
+  'hi CmpItemKindModule                  guifg=#cc9057 |' ..
+  'hi CmpItemKindOperator                guifg=#e06c75 |' ..
+  'hi CmpItemKindProperty                guifg=#56b6c2 |' ..
+  'hi CmpItemKindReference               guifg=#cc9057 |' ..
+  'hi CmpItemKindSnippet                 guifg=#e06c75 |' ..
+  'hi CmpItemKindStruct                  guifg=#c678dd |' ..
+  'hi CmpItemKindText                    guifg=#abb2bf |' ..
+  'hi CmpItemKindTypeParameter           guifg=#e06c75 |' ..
+  'hi CmpItemKindUnit                    guifg=#abb2bf |' ..
+  'hi CmpItemKindValue                   guifg=#cc9057 |' ..
+  'hi CmpItemKindVariable                guifg=#c678dd |' ..
+  'hi DiagnosticHint                     guifg=#bf68d9 |' ..
   -- 'hi DiagnosticVirtualTextWarn          guifg=#e5c07b guibg=#333230 |' ..
   -- 'hi DiagnosticVirtualTextHint          guifg=#8bba7f guibg=#333e34 |' ..
   -- 'hi MatchParen                         guifg=#fe8019  |' ..
