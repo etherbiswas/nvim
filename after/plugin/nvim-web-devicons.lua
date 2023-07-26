@@ -11,7 +11,7 @@ devicons.setup {
   },
   -- globally enable default icons (default to false)
   -- will get overriden by `get_icons` option
-  default = false
+  default = true
 }
 -- devicons.set_icon {
 --   ["js"] = {

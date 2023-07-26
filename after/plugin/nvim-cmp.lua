@@ -32,7 +32,7 @@ cmp.setup {
     ['<C-j>'] = cmp.mapping.select_next_item(),
     ['<C-k>'] = cmp.mapping.select_prev_item(),
     ['<C-b>'] = cmp.mapping.scroll_docs(2),
-    ['<C-f>'] = cmp.mapping.scroll_docs( -2),
+    ['<C-f>'] = cmp.mapping.scroll_docs(-2),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
     ['<C-y>'] = cmp.mapping.confirm {
@@ -53,8 +53,8 @@ cmp.setup {
     ['<S-Tab>'] = function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
-      elseif luasnip.jumpable( -1) then
-        luasnip.jump( -1)
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
       else
         fallback()
       end
@@ -67,7 +67,7 @@ cmp.setup {
     { name = 'path' },
   },
   formatting = {
-    format = lspkind.cmp_format({ mode = 'text', with_text = false, maxwidth = 50 })
+    format = lspkind.cmp_format({ mode = 'symbol_text', maxwidth = 50 })
   },
 
   window = {

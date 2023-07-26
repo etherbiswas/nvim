@@ -19,7 +19,7 @@ bufferline.setup({
     --- this should return a string
     --- Don't get too fancy as this function will be executed a lot
     diagnostics_indicator = function(count, level, diagnostics_dict, context)
-      local icon = level:match("error") and " " or " "
+      local icon = level:match("error") and "󰅚 " or " "
       return " " .. icon
     end,
     color_icons = true,
@@ -30,39 +30,39 @@ bufferline.setup({
     --separator_style = "slant" | "thick" | "thin" | {"any", "any"},
   },
   -- Gruvbox material --
-  --   highlights = {
-  --     fill = {
-  --       bg = '#282828'
-  --     },
-  --     separator = {
-  --       fg = '#282828',
-  --       bg = '#151818',
-  --     },
-  --     separator_selected = {
-  --       fg = '#282828',
-  --     }
-  --   },
-  -- })
-
-  -- Onedark --
   highlights = {
     fill = {
-      bg = '#21252b'
+      bg = '#282828'
     },
     separator = {
-      fg = '#2c323c',
-      bg = '#21252b',
+      fg = '#282828',
+      bg = '#151818',
     },
     separator_selected = {
-      fg = '#2c323c',
-      -- bg = '#21252b'
-    },
-    background = {
-      fg = '#404754',
-      bg = '#21252b'
-    },
+      fg = '#282828',
+    }
   },
 })
+
+-- Onedark --
+--   highlights = {
+--     fill = {
+--       bg = '#21252b'
+--     },
+--     separator = {
+--       fg = '#2c323c',
+--       bg = '#21252b',
+--     },
+--     separator_selected = {
+--       fg = '#2c323c',
+--       -- bg = '#21252b'
+--     },
+--     background = {
+--       fg = '#404754',
+--       bg = '#21252b'
+--     },
+--   },
+-- })
 
 --nnoremap <silent> gb :BufferLinePick<CR>
 vim.api.nvim_set_keymap("n", "gb", "<Cmd>BufferLinePick<CR>", { noremap = true, silent = true })
@@ -77,5 +77,5 @@ vim.api.nvim_set_keymap("n", "<leader>8", "<Cmd>BufferLineGoToBuffer 8<CR>", { n
 vim.api.nvim_set_keymap("n", "<leader>9", "<Cmd>BufferLineGoToBuffer 9<CR>", { noremap = true, silent = true })
 
 -- Onedark --
-vim.cmd [[highlight BufferLineModifiedSelected guifg=#c0bdbd gui=nocombine]]
-vim.cmd [[highlight BufferLineModified guifg=#404754 gui=nocombine]]
+-- vim.cmd [[highlight BufferLineModifiedSelected guifg=#c0bdbd gui=nocombine]]
+-- vim.cmd [[highlight BufferLineModified guifg=#404754 gui=nocombine]]
