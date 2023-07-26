@@ -128,11 +128,11 @@ saga.setup({
 })
 
 -- Gruvbox material --
-vim.cmd([[highlight SagaWinbarVariable gui=NONE, guifg=#d3869b]])
 vim.cmd([[highlight SagaWinbarSep gui=NONE, guifg=#7c6f64]])
-vim.cmd([[highlight SagaWinbarFolderName gui=NONE, guifg=#e2cca9]])
-vim.cmd([[highlight SagaWinbarFolder gui=NONE, guifg=#8bba7f]])
-vim.cmd([[highlight SagaWinbarFilename gui=NONE, guifg=#7c6f64]])
+-- vim.cmd([[highlight SagaWinbarVariable gui=NONE, guifg=#d3869b]])
+-- vim.cmd([[highlight SagaWinbarFolderName gui=NONE, guifg=#e2cca9]])
+-- vim.cmd([[highlight SagaWinbarFolder gui=NONE, guifg=#8bba7f]])
+-- vim.cmd([[highlight SagaWinbarFilename gui=NONE, guifg=#7c6f64]])
 
 -- OneDark --
 -- vim.cmd([[highlight SagaWinbarSep gui=NONE, guifg=#abb2bf]])
