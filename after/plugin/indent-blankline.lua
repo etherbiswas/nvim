@@ -38,5 +38,5 @@ blankline.setup {
   -- },
 }
 
-vim.cmd [[highlight IndentBlanklineContextStart guibg=#3e4452 gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineContextChar guifg=#3e4452 gui=nocombine]]
+-- vim.cmd [[highlight IndentBlanklineContextStart guibg=#3e4452 gui=nocombine]]
+-- vim.cmd [[highlight IndentBlanklineContextChar guifg=#3e4452 gui=nocombine]]

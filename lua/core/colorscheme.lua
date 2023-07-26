@@ -245,7 +245,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
   -- 'hi TelescopeResultsBorder             guifg=#1d2021 guibg=#1d2021 |' ..
 })
 
-local colorscheme = "onedark"
+local colorscheme = "gruvbox-material"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
