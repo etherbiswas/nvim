@@ -108,6 +108,7 @@ return packer.startup(function(use)
       "jose-elias-alvarez/null-ls.nvim",
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
+      "jay-babu/mason-null-ls.nvim"
     },
   }
   -- Autopairs

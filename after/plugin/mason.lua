@@ -8,6 +8,11 @@ if not mason_lspconfig_status_ok then
   return
 end
 
+local mason_null_ls_status_ok, mason_null_ls = pcall(require, 'mason-null-ls')
+if not mason_null_ls_status_ok then
+  return
+end
+
 mason.setup({
   ui = {
     border = "none",
@@ -21,7 +26,7 @@ mason.setup({
   max_concurrent_installers = 4,
 })
 
-local servers = {
+local lspconfig = {
   "clangd",
   "cssls",
   "tailwindcss",
@@ -36,13 +41,17 @@ local servers = {
   "intelephense",
 }
 
---[[ local formatters = {
+local null_ls = {
   "prettierd",
-} ]]
---[[ local linters = {
   "eslint_d",
-} ]]
+}
+
 mason_lspconfig.setup({
-  ensure_installed = servers,
+  ensure_installed = lspconfig,
+  automatic_installation = true,
+})
+
+mason_null_ls.setup({
+  ensure_installed = null_ls,
   automatic_installation = true,
 })
