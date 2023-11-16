@@ -85,6 +85,7 @@ return packer.startup(function(use)
 
   -- Indent line
   use 'lukas-reineke/indent-blankline.nvim'
+  use 'HiPhish/rainbow-delimiters.nvim'
 
   -- Autocomplete
   use {

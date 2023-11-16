@@ -1,8 +1,9 @@
-local blankline_status_ok, blankline = pcall(require, 'indent_blankline')
+local blankline_status_ok, blankline = pcall(require, 'ibl')
 if not blankline_status_ok then
   return
 end
 
+blankline.setup()
 -- Gruvbox material --
 -- vim.cmd [[highlight IndentBlanklineIndent1 guifg=#ea6962 gui=nocombine]]
 -- vim.cmd [[highlight IndentBlanklineIndent2 guifg=#e9b143 gui=nocombine]]
@@ -22,21 +23,21 @@ end
 -- vim.opt.list = true
 -- vim.opt.listchars:append "space:⋅"
 
-blankline.setup {
-  space_char_blankline = " ",
-  show_trailing_blankline_indent = false,
-  show_first_indent_level = true,
-  show_current_context = true,
-  show_current_context_start = true,
-  -- char_highlight_list = {
-  --   "IndentBlanklineIndent1",
-  --   "IndentBlanklineIndent2",
-  --   "IndentBlanklineIndent3",
-  --   "IndentBlanklineIndent4",
-  --   "IndentBlanklineIndent5",
-  --   "IndentBlanklineIndent6",
-  -- },
-}
+--blankline.setup {
+-- space_char_blankline = " ",
+--show_trailing_blankline_indent = false,
+-- show_first_indent_level = true,
+--show_current_context = true,
+--show_current_context_start = true,
+-- char_highlight_list = {
+--   "IndentBlanklineIndent1",
+--   "IndentBlanklineIndent2",
+--   "IndentBlanklineIndent3",
+--   "IndentBlanklineIndent4",
+--   "IndentBlanklineIndent5",
+--   "IndentBlanklineIndent6",
+-- },
+--}
 
 -- vim.cmd [[highlight IndentBlanklineContextStart guibg=#3e4452 gui=nocombine]]
 -- vim.cmd [[highlight IndentBlanklineContextChar guifg=#3e4452 gui=nocombine]]

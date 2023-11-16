@@ -11,7 +11,8 @@ treesitter.setup({
   auto_install = true,
   highlight = {
     enable = true,
-    disable = { "markdown", "html", "json" }
+    --disable = { "markdown", "html", "json" }
+    disable = {}
   },
   indent = {
     enable = true,
