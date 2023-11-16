@@ -19,7 +19,7 @@ rainbow.setup {
   },
 }
 
-local highlight = {
+--[[ local highlight = {
   "RainbowRed",
   "RainbowYellow",
   "RainbowBlue",
@@ -42,4 +42,4 @@ hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
   vim.api.nvim_set_hl(0, 'RainbowCyan', { link = 'RainbowDelimiterCyan' })
 end)
 
-require("ibl").setup { indent = { highlight = highlight } }
+require("ibl").setup { indent = { highlight = highlight } } ]]
