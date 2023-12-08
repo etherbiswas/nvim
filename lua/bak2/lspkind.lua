@@ -1,7 +1,4 @@
-local lspkind_status_ok, lspkind = pcall(require, 'lspkind')
-if not lspkind_status_ok then
-  return
-end
+local lspkind = require("lspkind")
 
 lspkind.init({
   -- defines how annotations are shown

@@ -1,7 +1,4 @@
-local illuminate_status_ok, illuminate = pcall(require, 'illuminate')
-if not illuminate_status_ok then
-  return
-end
+local illuminate = require("illuminate")
 
 illuminate.configure {
   -- providers: provider used to get references in the buffer, ordered by priority

@@ -1,28 +1,40 @@
 local fn = vim.fn
 
--- Automatically install packer --
-local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then
-  PACKER_BOOTSTRAP = fn.system {
+-- Automatically install lazy --
+-- local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+-- if fn.empty(fn.glob(install_path)) > 0 then
+--   PACKER_BOOTSTRAP = fn.system {
+--     "git",
+--     "clone",
+--     "--depth",
+--     "1",
+--     "https://github.com/wbthomason/packer.nvim",
+--     install_path,
+--   }
+--   print "Installing packer close and reopen Neovim..."
+--   vim.cmd [[packadd packer.nvim]]
+-- end
+local lazypath = fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  fn.system({
     "git",
     "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
-    install_path,
-  }
-  print "Installing packer close and reopen Neovim..."
-  vim.cmd [[packadd packer.nvim]]
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
 -- Autocommand that reloads neovim whenever you save the packer_init.lua file --
-vim.cmd [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost packer_init.lua source <afile> | PackerSync
-  augroup end
-]]
-
+-- vim.cmd [[
+--   augroup packer_user_config
+--     autocmd!
+--     autocmd BufWritePost packer_init.lua source <afile> | PackerSync
+--   augroup end
+-- ]]
+--
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then

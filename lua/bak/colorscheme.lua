@@ -1,3 +1,22 @@
+return {
+  "sainnhe/gruvbox-material",
+  config = function ()
+    vim.g.gruvbox_material_better_performance = '1'
+    vim.g.gruvbox_material_enable_bold = '0'
+    vim.g.gruvbox_material_disable_italic_comment = '0'
+    vim.g.gruvbox_material_transparent_background = "0"
+    vim.g.gruvbox_material_background = 'hard'
+    vim.g.gruvbox_material_foreground = 'material'
+    vim.g.gruvbox_material_diagnostic_virtual_text = 'colored'
+    vim.g.gruvbox_material_visual = 'grey background' -- 'reverse'
+    vim.g.gruvbox_material_current_word = 'underline' -- 'grey background'
+    vim.g.gruvbox_material_statusline_style = 'default'
+    vim.g.gruvbox_contrast_dark = 'hard'
+  --'folke/tokyonight.nvim',
+  --'joshdick/onedark.vim',
+end,
+}
+
 require("tokyonight").setup({
   -- your configuration comes here
   -- or leave it empty to use the default settings

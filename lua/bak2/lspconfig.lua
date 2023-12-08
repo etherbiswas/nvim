@@ -1,5 +1,4 @@
-local status, nvim_lsp = pcall(require, "lspconfig")
-if (not status) then return end
+local nvim_lsp = require("lspconfig")
 
 -- Diagnostic symbols in the sign column (gutter)
 local signs = { Error = "󰅚 ", Warn = " ", Hint = "󰌶 ", Info = " " }

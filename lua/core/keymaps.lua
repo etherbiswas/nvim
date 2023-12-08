@@ -8,7 +8,7 @@ end
 
 --Remap space as leader key
 -- map("", "<Space>", "<Nop>")
-vim.g.mapleader = " "
+vim.g.mapleader = "<Space>"
 -- vim.g.maplocalleader = " "
 
 -- Modes

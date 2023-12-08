@@ -14,6 +14,7 @@ if not mason_null_ls_status_ok then
 end
 
 mason.setup({
+  PATH = "prepend", -- "skip" seems to cause the spawning error
   ui = {
     border = "none",
     icons = {
