@@ -182,8 +182,9 @@ return {
     -- vim.api.nvim_set_hl(0, 'RainbowDelimiterViolet', { link = 'SagaEvent' })
     -- vim.api.nvim_set_hl(0, 'RainbowDelimiterCyan', { link = 'SagaField' })
 
-    vim.api.nvim_set_hl(0, 'RainbowDelimiterYellow', { fg = '#ea6962' })
     --vim.api.nvim_set_hl(0, 'RainbowDelimiterRed', { fg = '#d8a657' })
+
+    vim.api.nvim_set_hl(0, 'RainbowDelimiterYellow', { fg = '#ea6962' })
     vim.api.nvim_set_hl(0, 'RainbowDelimiterViolet', { fg = '#7daea3' })
     vim.api.nvim_set_hl(0, 'RainbowDelimiterRed', { fg = '#e78a4e' })
     vim.api.nvim_set_hl(0, 'RainbowDelimiterGreen', { fg = '#a9b665' })
