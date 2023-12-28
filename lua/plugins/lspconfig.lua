@@ -16,21 +16,16 @@ return {
     end
 
     local config = {
-      virtual_text = false,
-      -- virtual_text = {
-      --   prefix = '●'
-      -- },
       signs = {
         active = signs, -- show signs
       },
       update_in_insert = true,
       underline = true,
-      severity_sort = true,
       float = {
         source = "always",
         style = "minimal",
         border = "rounded",
-        focusable = true,
+        focusable = false,
         header = "",
         prefix = "",
       },
@@ -47,10 +42,10 @@ return {
 
     vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
       vim.lsp.diagnostic.on_publish_diagnostics, {
-        virtual_text = false,
         underline = true,
         update_in_insert = true,
-        -- virtual_text = { spacing = 4, prefix = "●" },
+        --virtual_text = false,
+        virtual_text = { spacing = 2, prefix = "●" },
         severity_sort = true,
       })
 

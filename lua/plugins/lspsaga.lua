@@ -184,11 +184,11 @@ return {
 
     --vim.api.nvim_set_hl(0, 'RainbowDelimiterRed', { fg = '#d8a657' })
 
-    vim.api.nvim_set_hl(0, 'RainbowDelimiterYellow', { fg = '#ea6962' })
-    vim.api.nvim_set_hl(0, 'RainbowDelimiterViolet', { fg = '#7daea3' })
-    vim.api.nvim_set_hl(0, 'RainbowDelimiterRed', { fg = '#e78a4e' })
-    vim.api.nvim_set_hl(0, 'RainbowDelimiterGreen', { fg = '#a9b665' })
-    vim.api.nvim_set_hl(0, 'RainbowDelimiterBlue', { fg = '#d3869b' })
-    vim.api.nvim_set_hl(0, 'RainbowDelimiterCyan', { fg = '#89b482' })
+    -- vim.api.nvim_set_hl(0, 'RainbowDelimiterYellow', { fg = '#ea6962' })
+    -- vim.api.nvim_set_hl(0, 'RainbowDelimiterViolet', { fg = '#7daea3' })
+    -- vim.api.nvim_set_hl(0, 'RainbowDelimiterRed', { fg = '#e78a4e' })
+    -- vim.api.nvim_set_hl(0, 'RainbowDelimiterGreen', { fg = '#a9b665' })
+    -- vim.api.nvim_set_hl(0, 'RainbowDelimiterBlue', { fg = '#d3869b' })
+    -- vim.api.nvim_set_hl(0, 'RainbowDelimiterCyan', { fg = '#89b482' })
   end
 }

@@ -72,26 +72,11 @@ return {
       },
 
       window = {
-        --documentation = cmp.config.window.bordered(),
-        --completion = cmp.config.window.bordered(),
-        --[[
-        completion = {
-          border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-        },
-        --  documentation = cmp.config.window.bordered(),
-        documentation = {
-          border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-        },
-        ]] --
       },
       experimental = {
         ghost_text = true,
         active_replace = true
       },
     }
-
-    --vim.cmd [[
-    --  highlight! default link CmpItemKind CmpItemMenuDefault
-    --]]
   end,
 }

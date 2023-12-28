@@ -17,7 +17,6 @@ return {
       auto_install = true,
       highlight = {
         enable = true,
-        --disable = { "markdown", "html", "json" }
         disable = {}
       },
       indent = {

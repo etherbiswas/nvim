@@ -7,9 +7,7 @@ local function map(mode, lhs, rhs, opts)
 end
 
 --Remap space as leader key
--- map("", "<Space>", "<Nop>")
 vim.g.mapleader = "<Space>"
--- vim.g.maplocalleader = " "
 
 -- Modes
 --   normal_mode = "n",
@@ -29,6 +27,7 @@ map("n", "<C-k>", "2gk")
 map("n", "<C-a>", "ggVG")
 map("n", "<C-q>", ":q!<CR>")
 map("n", "<A-q>", ":qa!<CR>")
+
 -- File write/edit options
 map("n", "<C-x>", ":wq!<CR>")
 map("n", "<C-s>", ":w!<CR>")
