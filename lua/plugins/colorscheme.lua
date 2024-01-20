@@ -9,8 +9,8 @@ return {
     vim.g.gruvbox_material_background = 'hard'
     vim.g.gruvbox_material_foreground = 'material'
     vim.g.gruvbox_material_diagnostic_virtual_text = 'colored'
-    vim.g.gruvbox_material_visual = 'grey background' -- 'reverse'
-    vim.g.gruvbox_material_current_word = 'underline' -- 'grey background'
+    vim.g.gruvbox_material_visual = 'reverse'               -- 'grey background'
+    vim.g.gruvbox_material_current_word = 'grey background' -- 'underline'
     vim.g.gruvbox_material_statusline_style = 'default'
     vim.g.gruvbox_contrast_dark = 'hard'
 
