@@ -30,7 +30,7 @@ return {
       "tailwindcss",
       "html",
       "dockerls",
-      "tsserver",
+      -- "tsserver",
       "lua_ls",
       "pyright",
       "bashls",

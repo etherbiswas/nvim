@@ -2,7 +2,7 @@ return {
   "nvimtools/none-ls.nvim", -- configure formatters & linters
   --"jose-elias-alvarez/null-ls.nvim",
   lazy = true,
-  -- event = { "BufReadPre", "BufNewFile" }, -- to enable uncomment this
+  event = { "BufReadPre", "BufNewFile" }, -- to enable uncomment this
   dependencies = {
     "jay-babu/mason-null-ls.nvim",
   },
@@ -25,7 +25,7 @@ return {
           null_ls.builtins.formatting.prettierd,
           null_ls.builtins.formatting.fish_indent,
           null_ls.builtins.diagnostics.fish,
-          null_ls.builtins.diagnostics.tidy
+          null_ls.builtins.diagnostics.tidy,
         },
         on_attach = function(client, bufnr)
           if client.supports_method("textDocument/formatting") then
@@ -34,7 +34,8 @@ return {
               group = augroup,
               buffer = bufnr,
               callback = function()
-                lsp_formatting(bufnr)
+                vim.lsp.buf.format({ bufnr = bufnr })
+                -- lsp_formatting(bufnr)
               end,
             })
           end
