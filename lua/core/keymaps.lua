@@ -7,7 +7,7 @@ local function map(mode, lhs, rhs, opts)
 end
 
 --Remap space as leader key
-vim.g.mapleader = "<Space>"
+vim.g.mapleader = " "
 
 -- Modes
 --   normal_mode = "n",

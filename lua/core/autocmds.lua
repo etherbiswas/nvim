@@ -45,10 +45,17 @@ autocmd('BufWritePre', {
 })
 
 -- Don't auto commenting new lines
+-- autocmd('BufEnter', {
+--   pattern = '',
+--   command = 'set fo-=c fo-=r fo-=o'
+-- })
+
+-- Auto comment new lines
 autocmd('BufEnter', {
-  pattern = '',
-  command = 'set fo-=c fo-=r fo-=o'
+  pattern = '*',
+  command = 'setlocal formatoptions+=cro'
 })
+
 
 -- Set indentation to 2 spaces
 augroup('setIndent', { clear = true })
