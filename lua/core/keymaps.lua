@@ -68,7 +68,7 @@ map("i", "jk", "<ESC>")
 -- Extensions
 map("n", "<C-b>", ":NvimTreeToggle<CR>")
 map("i", "<C-b>", "<Esc>:NvimTreeToggle<CR>")
-map("n", "<C-m>", ":RunFile<CR>")
+map("n", "<C-CR>", ":RunFile<CR>")
 
 -- Visual --
 map("v", "j", "gj")
