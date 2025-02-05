@@ -1,0 +1,20 @@
+name: Trigger Dotfiles Update
+
+on:
+  # Trigger when changes are pushed to the "lazy.nvim" branch
+  push:
+    branches:
+      - lazy.nvim  # This is the branch you want to watch
+
+jobs:
+  notify-dotfiles-repo:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Send a dispatch event to the dotfiles repo to trigger the submodule update
+      - name: Send dispatch event to dotfiles repo
+        run: |
+          curl -X POST -H "Authorization: token ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \
+          -H "Accept: application/vnd.github.everest-preview+json" \
+          "https://api.github.com/repos/etherbiswas/dotfiles/dispatches" \
+          -d '{"event_type": "update_nvim"}'  # Event type to trigger workflow in dotfiles repo
