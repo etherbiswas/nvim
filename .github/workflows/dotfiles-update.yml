@@ -30,7 +30,7 @@ jobs:
       - name: Pull latest .config/nvim from dotfiles
         run: |
           cd dotfiles
-          git pull origin main
+          git pull origin hyprland
           git subtree pull --prefix=.config/nvim https://github.com/etherbiswas/nvim.git lazy.nvim --squash
 
       - name: Merge updates into nvim repo
