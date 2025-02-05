@@ -27,9 +27,14 @@ jobs:
         run: |
           git clone https://github.com/etherbiswas/dotfiles.git dotfiles
 
-      - name: Pull latest .config/nvim from dotfiles
+      - name: Configure Git for dotfiles
         run: |
           cd dotfiles
+          git config user.name "GitHub Actions"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Pull latest .config/nvim from dotfiles
+        run: |
           git pull origin hyprland
           git subtree pull --prefix=.config/nvim https://github.com/etherbiswas/nvim.git lazy.nvim --squash
 
