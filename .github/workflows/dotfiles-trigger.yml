@@ -1,4 +1,5 @@
-name: Trigger Dotfiles Update
+
+name: Trigger Repository Update
 
 on:
   push:
@@ -6,37 +7,13 @@ on:
       - lazy.nvim
 
 jobs:
-  notify-dotfiles-repo:
+  notify:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read  # Required for checking existing dispatches
-      actions: read   # Required for checking existing dispatches
-
     steps:
-      - name: Check for existing dispatches
-        id: check_dispatch
-        run: |
-          recent_runs=$(curl -s -H "Authorization: token ${{ secrets.PERSONAL_ACCESS_TOKEN }}" "https://api.github.com/repos/etherbiswas/dotfiles/actions/runs?event=repository_dispatch&status=completed")
-          existing_dispatch=$(echo "$recent_runs" | jq -r '.workflow_runs[] | select(.event == "repository_dispatch" and .inputs.event_type == "update-subtree") | .id')
-          if [[ -n "$existing_dispatch" ]]; then
-            echo "A recent dispatch with the same event type already exists (run ID: $existing_dispatch). Skipping."
-            echo "::set-output name=skip_dispatch::true" # Set output to skip the next step
-          else
-            echo "::set-output name=skip_dispatch::false"
-          fi
-
-      - name: Send dispatch event to dotfiles repo
-        if: steps.check_dispatch.outputs.skip_dispatch == 'false'
-        run: |
-          response=$(curl -X POST -H "Authorization: token ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \
-          -H "Accept: application/vnd.github.everest-preview+json" \
-          "https://api.github.com/repos/etherbiswas/dotfiles/dispatches" \
-          -d "{\"event_type\": \"update-subtree\"}")  # Escaped double quotes
-
-          # Check if response code is 204 (No Content)
-          if [[ "$(echo "$response" | jq -r '.message')" == "Bad credentials" ]]; then
-            echo "Error: Invalid token. Check your secrets."
-            exit 1
-          fi
-
-          echo "Dispatch triggered successfully."
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          repository: etherbiswas/dotfiles
+          event-type: update-subtree
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
