@@ -36,6 +36,8 @@ jobs:
       - name: Merge updates into nvim repo
         run: |
           rsync -av dotfiles/.config/nvim/ ./
+          git rm --cached dotfiles || echo "No submodule to remove"
+          rm -rf .gitmodules || echo "No .gitmodules file"
           git add .
           git commit -m "Updated from dotfiles" || echo "No changes to commit"
           git push origin lazy.nvim
