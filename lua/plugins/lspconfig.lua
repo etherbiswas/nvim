@@ -9,15 +9,21 @@ return {
     local nvim_lsp = require("lspconfig")
 
     -- Diagnostic symbols in the sign column (gutter)
-    local signs = { Error = "󰅚 ", Warn = " ", Hint = "󰌶 ", Info = " " }
-    for type, icon in pairs(signs) do
-      local hl = "DiagnosticSign" .. type
-      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "", linehl = "" })
-    end
+    local signs = {
+      [vim.diagnostic.severity.ERROR] = "󰅚 ",
+      [vim.diagnostic.severity.WARN] = " ",
+      [vim.diagnostic.severity.HINT] = "󰌶 ",
+      [vim.diagnostic.severity.INFO] = " "
+    }
+    -- for type, icon in pairs(signs) do
+    --   local hl = "DiagnosticSign" .. type
+    --vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "", linehl = "" })
+    -- end
 
-    local config = {
+    vim.diagnostic.config({
       signs = {
-        active = signs, -- show signs
+        text = signs,
+        -- active = signs, -- show signs
       },
       update_in_insert = true,
       underline = true,
@@ -29,8 +35,8 @@ return {
         header = "",
         prefix = "",
       },
-    }
-    vim.diagnostic.config(config)
+    })
+    -- vim.diagnostic.config(config)
 
     vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
       border = "rounded",
