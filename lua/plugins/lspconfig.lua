@@ -6,8 +6,6 @@ return {
     { "antosha417/nvim-lsp-file-operations", config = true },
   },
   config = function()
-    local nvim_lsp = require("lspconfig")
-
     -- Diagnostic symbols in the sign column (gutter)
     local signs = {
       [vim.diagnostic.severity.ERROR] = "󰅚 ",
@@ -98,7 +96,7 @@ return {
     -- Set up completion using nvim_cmp with LSP source
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-    nvim_lsp.lua_ls.setup {
+    vim.lsp.config("lua_ls", {
       capabilities = capabilities,
       on_attach = function(client, bufnr)
         on_attach(client, bufnr)
@@ -107,7 +105,6 @@ return {
       settings = {
         Lua = {
           diagnostics = {
-            -- Get the language server to recognize the `vim` global
             globals = { 'vim' },
           },
           workspace = {
@@ -118,48 +115,48 @@ return {
           },
         },
       },
-    }
+    })
 
-    nvim_lsp.html.setup {
+    vim.lsp.config("html", {
       on_attach = on_attach,
-      capabilities = capabilities
-    }
+      capabilities = capabilities,
+    })
 
-    nvim_lsp.cssls.setup {
+    vim.lsp.config("cssls", {
       on_attach = on_attach,
-      capabilities = capabilities
-    }
+      capabilities = capabilities,
+    })
 
-    nvim_lsp.clangd.setup {
+    vim.lsp.config("clangd", {
       on_attach = on_attach,
-      capabilities = capabilities
-    }
+      capabilities = capabilities,
+    })
 
-    nvim_lsp.tailwindcss.setup {
+    vim.lsp.config("tailwindcss", {
       on_attach = on_attach,
-      capabilities = capabilities
-    }
+      capabilities = capabilities,
+    })
 
-    nvim_lsp.pyright.setup {
+    vim.lsp.config("pyright", {
       on_attach = on_attach,
-      capabilities = capabilities
-    }
+      capabilities = capabilities,
+    })
 
-    nvim_lsp.flow.setup {
+    vim.lsp.config("flow", {
       on_attach = on_attach,
-      capabilities = capabilities
-    }
+      capabilities = capabilities,
+    })
 
-    nvim_lsp.ts_ls.setup {
+    vim.lsp.config("ts_ls", {
       on_attach = on_attach,
       filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
       cmd = { "typescript-language-server", "--stdio" },
-      capabilities = capabilities
-    }
+      capabilities = capabilities,
+    })
 
-    nvim_lsp.sourcekit.setup {
+    vim.lsp.config("sourcekit", {
       on_attach = on_attach,
       capabilities = capabilities,
-    }
+    })
   end,
 }
