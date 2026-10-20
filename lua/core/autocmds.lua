@@ -44,6 +44,14 @@ autocmd('BufWritePre', {
   command = ":%s/\\s\\+$//e"
 })
 
+-- Remove list
+autocmd('BufEnter', {
+  pattern = '',
+  callback = function()
+    vim.opt.list = false
+  end,
+})
+
 -- Don't auto commenting new lines
 autocmd('BufEnter', {
   pattern = '',
